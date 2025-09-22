@@ -4,7 +4,7 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="alicia_duo_with_gripper">
-  <mujoco>
+ <mujoco>
     <compiler meshdir="../meshes" discardvisual="false" />
     <contact>
       <exclude body1="base_link" body2="Link1"/>
@@ -13,24 +13,24 @@
       <exclude body1="Link3" body2="Link4"/>
       <exclude body1="Link4" body2="Link5"/>
       <exclude body1="Link5" body2="Link6"/>
-      <exclude body1="Link6" body2="Link7"/>
-      <exclude body1="Link6" body2="Link8"/>
+      <exclude body1="Link6" body2="Link7_100mm"/>
+      <exclude body1="Link7_100mm" body2="Link8_100mm"/>
     </contact>
   </mujoco>
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="0.000826234790037244 0.00797844273246936 0.0457675129432197"
+        xyz="0.000826234790037254 0.00797844273246934 0.0457675129432198"
         rpy="0 0 0" />
       <mass
-        value="0.733961424639881" />
+        value="0.73396142463988" />
       <inertia
         ixx="0.00138410344771636"
-        ixy="5.6720111040394E-05"
-        ixz="5.14360164234926E-07"
+        ixy="5.67201110403939E-05"
+        ixz="5.14360164234968E-07"
         iyy="0.00173617223701436"
-        iyz="-1.48652204589359E-05"
+        iyz="-1.48652204589361E-05"
         izz="0.00274667683203449" />
     </inertial>
     <visual>
@@ -39,7 +39,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/base_link.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -53,7 +53,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/base_link.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -61,16 +61,16 @@
     name="Link1">
     <inertial>
       <origin
-        xyz="-0.00023059596979322 -1.29044880289368E-05 0.00303135656120138"
+        xyz="-0.000230595969793356 -1.29044880285874E-05 0.00303135656120136"
         rpy="0 0 0" />
       <mass
         value="0.195233452997315" />
       <inertia
-        ixx="0.000258351125070495"
-        ixy="8.79363230470574E-07"
-        ixz="-6.87511809706063E-07"
+        ixx="0.000258351125070494"
+        ixy="8.79363230470527E-07"
+        ixz="-6.87511809706097E-07"
         iyy="0.000149307709386745"
-        iyz="-1.0770311123737E-06"
+        iyz="-1.07703111237383E-06"
         izz="0.00033979127403906" />
     </inertial>
     <visual>
@@ -79,7 +79,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link1.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link1.STL" />
       </geometry>
       <material
         name="">
@@ -93,7 +93,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link1.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -119,16 +119,16 @@
     name="Link2">
     <inertial>
       <origin
-        xyz="0.150588695622621 0.000942409990636529 0.000567598737005918"
+        xyz="0.15058869562262 0.000942409990636479 0.000567598737006011"
         rpy="0 0 0" />
       <mass
         value="0.207033693061785" />
       <inertia
         ixx="0.000128135500181764"
-        ixy="1.19125955596779E-07"
-        ixz="1.66696805664368E-06"
+        ixy="1.19125955596776E-07"
+        ixz="1.66696805664369E-06"
         iyy="0.00020570839060521"
-        iyz="-3.50025103451337E-07"
+        iyz="-3.50025103451333E-07"
         izz="0.000122721347332605" />
     </inertial>
     <visual>
@@ -137,7 +137,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link2.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -151,7 +151,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link2.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -177,17 +177,17 @@
     name="Link3">
     <inertial>
       <origin
-        xyz="-0.00248143778782728 -0.0557863224791791 -0.000269720958938662"
+        xyz="-0.00248143778782739 -0.0557863224791789 -0.00026972095893869"
         rpy="0 0 0" />
       <mass
-        value="0.0845575643881721" />
+        value="0.0845575643881719" />
       <inertia
-        ixx="7.61918231204228E-05"
-        ixy="-2.26498109370297E-06"
-        ixz="-3.82299433438499E-07"
+        ixx="7.61918231204225E-05"
+        ixy="-2.26498109370293E-06"
+        ixz="-3.82299433438528E-07"
         iyy="2.87941476377691E-05"
-        iyz="-5.38445154034655E-06"
-        izz="8.04370526946762E-05" />
+        iyz="-5.38445154034657E-06"
+        izz="8.04370526946759E-05" />
     </inertial>
     <visual>
       <origin
@@ -195,7 +195,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link3.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link3.STL" />
       </geometry>
       <material
         name="">
@@ -209,7 +209,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link3.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -235,17 +235,17 @@
     name="Link4">
     <inertial>
       <origin
-        xyz="-0.000298365504307174 -0.000601369741452302 -0.0659740416550564"
+        xyz="-0.000298365511909815 -0.000601369792335375 -0.0659740414803652"
         rpy="0 0 0" />
       <mass
-        value="0.0653695985152062" />
+        value="0.0653695983290511" />
       <inertia
-        ixx="7.03004189278632E-05"
-        ixy="9.68417874269635E-09"
-        ixz="-7.50131698707186E-07"
-        iyy="6.87470299051185E-05"
-        iyz="-4.45271859245362E-08"
-        izz="1.68226189343447E-05" />
+        ixx="7.03004189237379E-05"
+        ixy="9.68417897045909E-09"
+        ixz="-7.50131701712901E-07"
+        iyy="6.87470299000528E-05"
+        iyz="-4.45271864002507E-08"
+        izz="1.68226189332686E-05" />
     </inertial>
     <visual>
       <origin
@@ -253,7 +253,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link4.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link4.STL" />
       </geometry>
       <material
         name="">
@@ -267,7 +267,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link4.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -293,17 +293,17 @@
     name="Link5">
     <inertial>
       <origin
-        xyz="-0.011368423379793 -0.0308687469846974 0.000870449933411358"
+        xyz="-0.0113684233797897 -0.0308687469846993 0.000870449933407672"
         rpy="0 0 0" />
       <mass
-        value="0.0507639016939595" />
+        value="0.0507639016939435" />
       <inertia
-        ixx="1.8770101707632E-05"
-        ixy="-2.01098609907273E-06"
-        ixz="5.15226500412765E-08"
-        iyy="2.51021034466019E-05"
-        iyz="-4.22412451734295E-08"
-        izz="1.72571710040497E-05" />
+        ixx="1.87701017076292E-05"
+        ixy="-2.01098609907295E-06"
+        ixz="5.15226500398009E-08"
+        iyy="2.5102103446601E-05"
+        iyz="-4.22412451729529E-08"
+        izz="1.72571710040514E-05" />
     </inertial>
     <visual>
       <origin
@@ -311,7 +311,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link5.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link5.STL" />
       </geometry>
       <material
         name="">
@@ -325,7 +325,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link5.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -351,17 +351,17 @@
     name="Link6">
     <inertial>
       <origin
-        xyz="-0.0284286209063363 -0.000164331776074633 0.0356458378036801"
+        xyz="-0.0284286209063364 -0.000164331776074683 0.0356458378036799"
         rpy="0 0 0" />
       <mass
         value="0.123298967748658" />
       <inertia
         ixx="8.15187871372542E-05"
-        ixy="1.00502626885531E-08"
-        ixz="-3.58286144151258E-06"
-        iyy="3.34532452274712E-05"
-        iyz="2.08982135984205E-08"
-        izz="8.71601554199556E-05" />
+        ixy="1.00502626885595E-08"
+        ixz="-3.58286144151255E-06"
+        iyy="3.34532452274713E-05"
+        iyz="2.08982135984139E-08"
+        izz="8.71601554199557E-05" />
     </inertial>
     <visual>
       <origin
@@ -369,7 +369,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link6.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link6.STL" />
       </geometry>
       <material
         name="">
@@ -383,7 +383,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link6.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -409,17 +409,17 @@
     name="Link7">
     <inertial>
       <origin
-        xyz="-2.97087515144234E-08 -0.0434087591943531 0.0106596716155943"
+        xyz="-2.97087516809569E-08 -0.0434087591943532 0.0106596716155974"
         rpy="0 0 0" />
       <mass
         value="0.0256461121677846" />
       <inertia
-        ixx="6.46830326573711E-06"
-        ixy="2.3954380101872E-11"
-        ixz="4.63721305371709E-12"
+        ixx="6.46830326573709E-06"
+        ixy="2.39543801056837E-11"
+        ixz="4.6372130544053E-12"
         iyy="5.13428741941763E-06"
-        iyz="1.26432048814165E-06"
-        izz="8.03606347912525E-06" />
+        iyz="1.26432048814164E-06"
+        izz="8.03606347912524E-06" />
     </inertial>
     <visual>
       <origin
@@ -427,7 +427,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link7.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link7.STL" />
       </geometry>
       <material
         name="">
@@ -441,7 +441,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link7.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link7.STL" />
       </geometry>
     </collision>
   </link>
@@ -467,17 +467,17 @@
     name="Link8">
     <inertial>
       <origin
-        xyz="2.97087526801576E-08 0.0434087591943507 0.0106596716155943"
+        xyz="2.9708752458113E-08 0.0434087591943507 0.0106596716155974"
         rpy="0 0 0" />
       <mass
-        value="0.0256461121677874" />
+        value="0.0256461121677875" />
       <inertia
-        ixx="6.46830326573821E-06"
-        ixy="2.3954379825951E-11"
-        ixz="-4.63721285095794E-12"
+        ixx="6.46830326573823E-06"
+        ixy="2.39543798195983E-11"
+        ixz="-4.63721285127558E-12"
         iyy="5.13428741941822E-06"
         iyz="-1.2643204881421E-06"
-        izz="8.03606347912601E-06" />
+        izz="8.03606347912604E-06" />
     </inertial>
     <visual>
       <origin
@@ -485,7 +485,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link8.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link8.STL" />
       </geometry>
       <material
         name="">
@@ -499,7 +499,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_3.0/meshes/Link8.STL" />
+          filename="package://lingdong_URDF_4.0/meshes/Link8.STL" />
       </geometry>
     </collision>
   </link>
