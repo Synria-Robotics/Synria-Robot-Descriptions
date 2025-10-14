@@ -1,81 +1,42 @@
-#!/usr/bin/env python3
-
-from setuptools import setup, find_packages
 import os
+from setuptools import setup, find_packages
 
-# Read the contents of README file
-this_directory = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+def find_data_files(package_dir, data_dirs):
+    data_files = []
+    for d in data_dirs:
+        # Walk through the data directory
+        for root, dirs, files in os.walk(os.path.join(package_dir, d)):
+            for f in files:
+                # Get the path relative to the package directory
+                data_files.append(os.path.join(root, f).replace(package_dir + os.sep, ''))
+    return data_files
 
-# Function to find all data files
-def package_files(directory):
-    paths = []
-    for (path, directories, filenames) in os.walk(directory):
-        for filename in filenames:
-            paths.append(os.path.join('..', path, filename))
-    return paths
+package_name = 'synria_robot_descriptions'
+if not os.path.exists(package_name):
+    os.makedirs(package_name)
+if not os.path.exists(os.path.join(package_name, '__init__.py')):
+    with open(os.path.join(package_name, '__init__.py'), 'w') as f:
+        f.write("# This file makes this a Python package.\n")
 
-# Collect all mesh, URDF, and MJCF files
-extra_files = []
-extra_files += package_files('meshes')
-extra_files += package_files('urdf')
-extra_files += package_files('mjcf')
+# Find all the data files
+data_files = find_data_files(package_name, ['urdf', 'meshes', 'mjcf'])
 
 setup(
-    name="synria_robot_descriptions",
+    name=package_name,
     version="1.0.0",
     author="Synria Robotics",
     author_email="support@synriarobotics.ai",
-    description="URDF and MJCF robot description files for Synria robotic platforms",
-    long_description=long_description,
+    description="URDF and MJCF robot description files for Synria robotic platforms.",
+    long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/synria-robotics/synria-robot-descriptions",
-    project_urls={
-        "Bug Tracker": "https://github.com/synria-robotics/synria-robot-descriptions/issues",
-        "Documentation": "https://github.com/synria-robotics/synria-robot-descriptions",
-        "Source Code": "https://github.com/synria-robotics/synria-robot-descriptions",
-    },
+    url="https://github.com/Synria-Robotics/Synria-robot-descriptions",
+    # Find the dummy package we created
     packages=find_packages(),
+    # Tell setuptools to include the non-Python files
     package_data={
-        '': extra_files,
+        package_name: ['urdf/**/*', 'meshes/**/*', 'mjcf/**/*']
     },
     include_package_data=True,
-    classifiers=[
-        "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Developers",
-        "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
-        "Topic :: Scientific/Engineering :: Artificial Intelligence",
-        "Topic :: Scientific/Engineering :: Physics",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-    ],
+    keywords="robotics, urdf, mjcf, robot-description",
     python_requires=">=3.7",
-    install_requires=[
-        # No Python dependencies required for robot description files
-    ],
-    extras_require={
-        "dev": [
-            "pytest>=6.0",
-            "black>=21.0",
-            "flake8>=3.8",
-        ],
-        "ros": [
-            # ROS-related dependencies if needed
-        ],
-    },
-    keywords="robotics, urdf, mjcf, robot-description, simulation, mujoco, ros",
-    entry_points={
-        "console_scripts": [
-            # Add any command-line tools if needed in the future
-        ],
-    },
-    zip_safe=False,  # Required for package data files
 )
