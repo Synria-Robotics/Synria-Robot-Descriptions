@@ -11,7 +11,7 @@ def find_data_files(package_dir, data_dirs):
                 data_files.append(os.path.join(root, f).replace(package_dir + os.sep, ''))
     return data_files
 
-package_name = 'synria_robot_descriptions'
+package_name = 'robot_descriptions'
 if not os.path.exists(package_name):
     os.makedirs(package_name)
 if not os.path.exists(os.path.join(package_name, '__init__.py')):
