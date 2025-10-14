@@ -3,9 +3,9 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="alicia_duo_with_gripper">
+  name="alicia_d_with_gripper">
  <mujoco>
-    <compiler meshdir="../meshes" discardvisual="false" />
+    <compiler meshdir="../../meshes/Alicia-D_v5_5/gripper50mm/" discardvisual="false" />
     <contact>
       <exclude body1="base_link" body2="Link1"/>
       <exclude body1="Link1" body2="Link2"/>
@@ -39,7 +39,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/base_link.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -53,7 +53,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/base_link.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -79,7 +79,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link1.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link1.STL" />
       </geometry>
       <material
         name="">
@@ -93,7 +93,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link1.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -137,7 +137,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link2.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -151,7 +151,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link2.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -195,7 +195,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link3.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link3.STL" />
       </geometry>
       <material
         name="">
@@ -209,7 +209,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link3.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -253,7 +253,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link4.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link4.STL" />
       </geometry>
       <material
         name="">
@@ -267,7 +267,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link4.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -311,7 +311,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link5.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link5.STL" />
       </geometry>
       <material
         name="">
@@ -325,7 +325,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link5.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -369,7 +369,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link6.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link6.STL" />
       </geometry>
       <material
         name="">
@@ -383,7 +383,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link6.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -427,7 +427,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link7.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link7.STL" />
       </geometry>
       <material
         name="">
@@ -441,7 +441,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link7.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link7.STL" />
       </geometry>
     </collision>
   </link>
@@ -456,12 +456,12 @@
     <child
       link="Link7" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="-0.05"
+      lower="-0.025"
+      upper="0"
       effort="5"
-      velocity="12" />
+      velocity="10" />
   </joint>
   <link
     name="Link8">
@@ -485,7 +485,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link8.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link8.STL" />
       </geometry>
       <material
         name="">
@@ -499,7 +499,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://lingdong_URDF_5.0/meshes/Link8.STL" />
+          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link8.STL" />
       </geometry>
     </collision>
   </link>
@@ -514,11 +514,11 @@
     <child
       link="Link8" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="0.05"
-      upper="0"
+      lower="0"
+      upper="0.025"
       effort="5"
-      velocity="12" />
+      velocity="10" />
   </joint>
 </robot>

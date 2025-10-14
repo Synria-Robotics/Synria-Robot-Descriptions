@@ -3,9 +3,9 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="BessicaDCodver">
+  name="Bessica-D_Covered">
     <mujoco>
-        <compiler meshdir="../meshes" balanceinertia="true" discardvisual="false" />
+        <compiler meshdir="../../meshes/Bessica-D_v1_0/withCover/" balanceinertia="true" discardvisual="false" />
         <contact>
             <exclude body1="base_link" body2="right_arm_base_link" />
             <exclude body1="right_arm_base_link" body2="right_arm_link1" />
@@ -68,7 +68,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/base_link.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -82,7 +82,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/base_link.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -108,7 +108,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_base_link.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_base_link.STL" />
       </geometry>
       <material
         name="">
@@ -122,7 +122,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_base_link.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -161,7 +161,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link1.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link1.STL" />
       </geometry>
       <material
         name="">
@@ -175,7 +175,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link1.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -219,7 +219,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link2.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link2.STL" />
       </geometry>
       <material
         name="">
@@ -233,7 +233,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link2.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -277,7 +277,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link3.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link3.STL" />
       </geometry>
       <material
         name="">
@@ -291,7 +291,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link3.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -335,7 +335,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link4.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link4.STL" />
       </geometry>
       <material
         name="">
@@ -349,7 +349,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link4.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -393,7 +393,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link5.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link5.STL" />
       </geometry>
       <material
         name="">
@@ -407,7 +407,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link5.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -451,7 +451,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link6.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link6.STL" />
       </geometry>
       <material
         name="">
@@ -465,7 +465,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link6.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -509,7 +509,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link7.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link7.STL" />
       </geometry>
       <material
         name="">
@@ -523,7 +523,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_link7.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_link7.STL" />
       </geometry>
     </collision>
   </link>
@@ -567,7 +567,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_gripper_left_finger.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_gripper_left_finger.STL" />
       </geometry>
       <material
         name="">
@@ -581,7 +581,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_gripper_left_finger.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_gripper_left_finger.STL" />
       </geometry>
     </collision>
   </link>
@@ -625,7 +625,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_gripper_right_finger.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_gripper_right_finger.STL" />
       </geometry>
       <material
         name="">
@@ -639,7 +639,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/right_arm_gripper_right_finger.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/right_arm_gripper_right_finger.STL" />
       </geometry>
     </collision>
   </link>
@@ -683,7 +683,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_base_link.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_base_link.STL" />
       </geometry>
       <material
         name="">
@@ -697,7 +697,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_base_link.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -736,7 +736,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link1.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link1.STL" />
       </geometry>
       <material
         name="">
@@ -750,7 +750,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link1.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -794,7 +794,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link2.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link2.STL" />
       </geometry>
       <material
         name="">
@@ -808,7 +808,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link2.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -852,7 +852,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link3.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link3.STL" />
       </geometry>
       <material
         name="">
@@ -866,7 +866,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link3.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -910,7 +910,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link4.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link4.STL" />
       </geometry>
       <material
         name="">
@@ -924,7 +924,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link4.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -968,7 +968,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link5.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link5.STL" />
       </geometry>
       <material
         name="">
@@ -982,7 +982,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link5.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -1026,7 +1026,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link6.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link6.STL" />
       </geometry>
       <material
         name="">
@@ -1040,7 +1040,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link6.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -1084,7 +1084,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link7.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link7.STL" />
       </geometry>
       <material
         name="">
@@ -1098,7 +1098,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_link7.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_link7.STL" />
       </geometry>
     </collision>
   </link>
@@ -1142,7 +1142,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_gripper_left_finger.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_gripper_left_finger.STL" />
       </geometry>
       <material
         name="">
@@ -1156,7 +1156,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_gripper_left_finger.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_gripper_left_finger.STL" />
       </geometry>
     </collision>
   </link>
@@ -1200,7 +1200,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_gripper_right_finger.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_gripper_right_finger.STL" />
       </geometry>
       <material
         name="">
@@ -1214,7 +1214,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="..meshes/left_arm_gripper_right_finger.STL" />
+          filename="../../meshes/Bessica-D_v1_0/withCover/left_arm_gripper_right_finger.STL" />
       </geometry>
     </collision>
   </link>

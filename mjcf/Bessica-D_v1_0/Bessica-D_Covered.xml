@@ -1,5 +1,5 @@
-<mujoco model="BessicaDCodver">
-  <compiler angle="radian" meshdir="../meshes/"/>
+<mujoco model="Bessica-D_Covered">
+  <compiler angle="radian" meshdir="../../meshes/Bessica-D_v1_0/withCover/" />
 
   <asset>
     <mesh name="base_link" content_type="model/stl" file="base_link.STL"/>
