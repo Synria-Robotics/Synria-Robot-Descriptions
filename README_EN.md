@@ -2,59 +2,73 @@
 
 English | [中文](README.md)
 
-This repository contains URDF (Unified Robot Description Format) models for Synria robotic platforms.
+This repository contains URDF (Unified Robot Description Format) and MJCF (MuJoCo Modeling Format) models for Synria robotic platforms.
 
 ## Repository Structure
 
 ```
-.
-├── README.md
-├── README_EN.md
-├── README_CN.md
-├── AliciaD/
-│   └── v5_4/
-│       └── gripper50mm/
-│           ├── meshes/
-│           └── urdf/
-└── BessicaD/
-    ├── BessicaDOnly/
-    │   ├── meshes/
-    │   └── urdf/
-    └── BessicaDwithCover/
-        ├── meshes/
-        └── urdf/
+├── meshes
+│   ├── Alicia-D_v5_4
+│   ├── Alicia-D_v5_5
+│   └── Bessica-D_v1_0
+├── mjcf
+│   ├── Alicia-D_v5_4
+│   ├── Alicia-D_v5_5
+│   └── Bessica-D_v1_0
+└── urdf
+    ├── Alicia-D_v5_4
+    ├── Alicia-D_v5_5
+    └── Bessica-D_v1_0
 ```
 
 ## Robot Platforms
 
-### AliciaD v5.4
-- **Location**: [`AliciaD/v5_4/gripper50mm/`](AliciaD/v5_4/gripper50mm/)
-- **Description**: Dual-arm robotic platform with 50mm gripper configuration
-- **Main URDF**: [`alicia_duo_with_gripper.urdf`](AliciaD/v5_4/gripper50mm/urdf/alicia_duo_with_gripper.urdf)
-- **MuJoCo XML**: [`alicia_duo_with_gripper.xml`](AliciaD/v5_4/gripper50mm/urdf/alicia_duo_with_gripper.xml)
+### Alicia-D v5.4
+- **Location**: `urdf/Alicia-D_v5_4/` and `mjcf/Alicia-D_v5_4/`
+- **Description**: Agile manipulation arm
+- **URDF**: [`alicia_d_with_gripper.urdf`](urdf/Alicia-D_v5_4/alicia_d_with_gripper.urdf)
+- **MuJoCo XML**: [`alicia_d_with_gripper.xml`](mjcf/Alicia-D_v5_4/alicia_d_with_gripper.xml)
 
 **Features:**
-- 7-DOF dual arms
-- Integrated gripper system
-- Tool center point (TCP) definition
+- 6-DOF robotic arm
 - MuJoCo physics simulation support
 
-### BessicaD
-Two variants are available:
+### Alicia-D v5.5
+- **Location**: `urdf/Alicia-D_v5_5/` and `mjcf/Alicia-D_v5_5/`
+- **Description**: Agile manipulation arm (multiple gripper configurations)
 
-#### BessicaD Only
-- **Location**: [`BessicaD/BessicaDOnly/`](BessicaD/BessicaDOnly/)
-- **Main URDF**: [`bessica_D_v2_1.urdf`](BessicaD/BessicaDOnly/urdf/bessica_D_v2_1.urdf)
-- **MuJoCo XML**: [`bessica_D_v2_1.xml`](BessicaD/BessicaDOnly/urdf/bessica_D_v2_1.xml)
+#### 50mm Gripper Configuration
+- **URDF**: [`alicia_d_gripper_50mm.urdf`](urdf/Alicia-D_v5_5/alicia_d_gripper_50mm.urdf)
+- **MuJoCo XML**: [`alicia_d_gripper_50mm.xml`](mjcf/Alicia-D_v5_5/alicia_d_gripper_50mm.xml)
 
-#### BessicaD with Cover
-- **Location**: [`BessicaD/BessicaDwithCover/`](BessicaD/BessicaDwithCover/)
-- **Main URDF**: [`BessicaDCodver.urdf`](BessicaD/BessicaDwithCover/urdf/BessicaDCodver.urdf)
-- **MuJoCo XML**: [`BessicaDCodver.xml`](BessicaD/BessicaDwithCover/urdf/BessicaDCodver.xml)
+#### 100mm Gripper Configuration
+- **URDF**: [`alicia_d_gripper_100mm.urdf`](urdf/Alicia-D_v5_5/alicia_d_gripper_100mm.urdf)
+- **MuJoCo XML**: [`alicia_d_gripper_100mm.xml`](mjcf/Alicia-D_v5_5/alicia_d_gripper_100mm.xml)
+
+### Bessica-D v1.0
+- **Location**: `urdf/Bessica-D_v1_0/` and `mjcf/Bessica-D_v1_0/`
+- **Description**: Dual-arm robotic platform
+
+#### Skeleton Version
+- **URDF**: [`bessica_D_skeleton.urdf`](urdf/Bessica-D_v1_0/bessica_D_skeleton.urdf)
+- **MuJoCo XML**: [`Bessica-D_Interactive.xml`](mjcf/Bessica-D_v1_0/Bessica-D_Interactive.xml)
+
+#### Covered Version
+- **URDF**: [`Bessica-D_Covered.urdf`](urdf/Bessica-D_v1_0/Bessica-D_Covered.urdf)
+- **MuJoCo XML**: [`Bessica-D_Covered.xml`](mjcf/Bessica-D_v1_0/Bessica-D_Covered.xml)
 
 **Features:**
 - Dual 7-DOF manipulator arms
-- Prismatic gripper joints
-- Base platform with mounting points
-- Collision meshes and visual representations
-- Inertial properties for realistic simulation
+
+## Usage
+
+1. **URDF Files**: For ROS integration and robot control
+2. **MJCF Files**: For MuJoCo physics simulation
+
+## Supported Simulation Environments
+
+- ROS/ROS2 (via URDF)
+- MuJoCo (via MJCF)
+- Gazebo (via URDF)
+- PyBullet (via URDF)
+- Issac Sim (via URDF)
