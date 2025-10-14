@@ -5,7 +5,7 @@
 <robot
   name="alicia_d_with_gripper">
  <mujoco>
-    <compiler meshdir="../../meshes/Alicia-D_v5_5/gripper50mm/" discardvisual="false" />
+    <compiler meshdir="../../meshes/Alicia_D_v5_5/gripper100mm/" discardvisual="false" />
     <contact>
       <exclude body1="base_link" body2="Link1"/>
       <exclude body1="Link1" body2="Link2"/>
@@ -13,24 +13,24 @@
       <exclude body1="Link3" body2="Link4"/>
       <exclude body1="Link4" body2="Link5"/>
       <exclude body1="Link5" body2="Link6"/>
-      <exclude body1="Link6" body2="Link7_50mm"/>
-      <exclude body1="Link7_50mm" body2="Link8_50mm"/>
+      <exclude body1="Link6" body2="Link7_100mm"/>
+      <exclude body1="Link7_100mm" body2="Link8_100mm"/>
     </contact>
   </mujoco>
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="0.000826234790037257 0.00797844273246933 0.0457675129432198"
+        xyz="0.000826234790037254 0.00797844273246934 0.0457675129432198"
         rpy="0 0 0" />
       <mass
         value="0.73396142463988" />
       <inertia
         ixx="0.00138410344771636"
         ixy="5.67201110403939E-05"
-        ixz="5.1436016423501E-07"
+        ixz="5.14360164234968E-07"
         iyy="0.00173617223701436"
-        iyz="-1.48652204589359E-05"
+        iyz="-1.48652204589361E-05"
         izz="0.00274667683203449" />
     </inertial>
     <visual>
@@ -39,7 +39,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/base_link.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -53,7 +53,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/base_link.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -61,17 +61,17 @@
     name="Link1">
     <inertial>
       <origin
-        xyz="-0.000230595969793434 -1.29044880293489E-05 0.00303135656120262"
+        xyz="-0.000230595969793356 -1.29044880285874E-05 0.00303135656120136"
         rpy="0 0 0" />
       <mass
-        value="0.195233452997327" />
+        value="0.195233452997315" />
       <inertia
-        ixx="0.000258351125070493"
-        ixy="8.79363230470998E-07"
-        ixz="-6.87511809706085E-07"
+        ixx="0.000258351125070494"
+        ixy="8.79363230470527E-07"
+        ixz="-6.87511809706097E-07"
         iyy="0.000149307709386745"
-        iyz="-1.07703111237379E-06"
-        izz="0.000339791274039062" />
+        iyz="-1.07703111237383E-06"
+        izz="0.00033979127403906" />
     </inertial>
     <visual>
       <origin
@@ -79,7 +79,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link1.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link1.STL" />
       </geometry>
       <material
         name="">
@@ -93,7 +93,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link1.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -119,16 +119,16 @@
     name="Link2">
     <inertial>
       <origin
-        xyz="0.15058869562262 0.000942409990636449 0.000567598737005813"
+        xyz="0.15058869562262 0.000942409990636479 0.000567598737006011"
         rpy="0 0 0" />
       <mass
-        value="0.207033693061786" />
+        value="0.207033693061785" />
       <inertia
         ixx="0.000128135500181764"
         ixy="1.19125955596776E-07"
         ixz="1.66696805664369E-06"
         iyy="0.00020570839060521"
-        iyz="-3.50025103451336E-07"
+        iyz="-3.50025103451333E-07"
         izz="0.000122721347332605" />
     </inertial>
     <visual>
@@ -137,7 +137,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link2.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -151,7 +151,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link2.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -177,17 +177,17 @@
     name="Link3">
     <inertial>
       <origin
-        xyz="-0.00248143779329096 -0.0557863222033137 -0.000269721122389092"
+        xyz="-0.00248143778782739 -0.0557863224791789 -0.00026972095893869"
         rpy="0 0 0" />
       <mass
-        value="0.0845575636182319" />
+        value="0.0845575643881719" />
       <inertia
-        ixx="7.61918224458836E-05"
-        ixy="-2.2649811089975E-06"
-        ixz="-3.82299429105109E-07"
-        iyy="2.87941474258093E-05"
-        iyz="-5.38445186494266E-06"
-        izz="8.04370522438273E-05" />
+        ixx="7.61918231204225E-05"
+        ixy="-2.26498109370293E-06"
+        ixz="-3.82299433438528E-07"
+        iyy="2.87941476377691E-05"
+        iyz="-5.38445154034657E-06"
+        izz="8.04370526946759E-05" />
     </inertial>
     <visual>
       <origin
@@ -195,7 +195,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link3.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link3.STL" />
       </geometry>
       <material
         name="">
@@ -209,7 +209,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link3.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -235,17 +235,17 @@
     name="Link4">
     <inertial>
       <origin
-        xyz="-0.00029836550449891 -0.000601368925850489 -0.0659740391896737"
+        xyz="-0.000298365511909815 -0.000601369792335375 -0.0659740414803652"
         rpy="0 0 0" />
       <mass
-        value="0.0653695953286769" />
+        value="0.0653695983290511" />
       <inertia
-        ixx="7.03004188086356E-05"
-        ixy="9.68417851216743E-09"
-        ixz="-7.50131707418213E-07"
-        iyy="6.87470297888139E-05"
-        iyz="-4.45271906081802E-08"
-        izz="1.68226189350756E-05" />
+        ixx="7.03004189237379E-05"
+        ixy="9.68417897045909E-09"
+        ixz="-7.50131701712901E-07"
+        iyy="6.87470299000528E-05"
+        iyz="-4.45271864002507E-08"
+        izz="1.68226189332686E-05" />
     </inertial>
     <visual>
       <origin
@@ -253,7 +253,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link4.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link4.STL" />
       </geometry>
       <material
         name="">
@@ -267,7 +267,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link4.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -293,17 +293,17 @@
     name="Link5">
     <inertial>
       <origin
-        xyz="-0.0113684233797882 -0.0308687469847002 0.000870449933405808"
+        xyz="-0.0113684233797897 -0.0308687469846993 0.000870449933407672"
         rpy="0 0 0" />
       <mass
-        value="0.0507639016939355" />
+        value="0.0507639016939435" />
       <inertia
-        ixx="1.87701017076279E-05"
-        ixy="-2.01098609907306E-06"
-        ixz="5.15226500390501E-08"
-        iyy="2.51021034466006E-05"
-        iyz="-4.22412451727219E-08"
-        izz="1.72571710040523E-05" />
+        ixx="1.87701017076292E-05"
+        ixy="-2.01098609907295E-06"
+        ixz="5.15226500398009E-08"
+        iyy="2.5102103446601E-05"
+        iyz="-4.22412451729529E-08"
+        izz="1.72571710040514E-05" />
     </inertial>
     <visual>
       <origin
@@ -311,7 +311,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link5.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link5.STL" />
       </geometry>
       <material
         name="">
@@ -325,7 +325,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link5.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -351,17 +351,17 @@
     name="Link6">
     <inertial>
       <origin
-        xyz="-0.0274897808069792 -1.78816252605362E-05 0.0342551063501212"
+        xyz="-0.0284286209063364 -0.000164331776074683 0.0356458378036799"
         rpy="0 0 0" />
       <mass
-        value="0.130364883326573" />
+        value="0.123298967748658" />
       <inertia
-        ixx="7.59035802593379E-05"
-        ixy="1.1454757042377E-08"
-        ixz="-3.58078000042196E-06"
-        iyy="3.53175388320522E-05"
-        iyz="2.09250433426614E-08"
-        izz="8.3197600961374E-05" />
+        ixx="8.15187871372542E-05"
+        ixy="1.00502626885595E-08"
+        ixz="-3.58286144151255E-06"
+        iyy="3.34532452274713E-05"
+        iyz="2.08982135984139E-08"
+        izz="8.71601554199557E-05" />
     </inertial>
     <visual>
       <origin
@@ -369,7 +369,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link6.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link6.STL" />
       </geometry>
       <material
         name="">
@@ -383,7 +383,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link6.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -391,8 +391,8 @@
     name="Joint6"
     type="revolute">
     <origin
-      xyz="-0.00385 -0.0575 0.001"
-      rpy="1.5708 0 0" />
+      xyz="-0.00384999999999946 -0.0574999999999999 0.00100000000000069"
+      rpy="1.5707963267949 0 0" />
     <parent
       link="Link5" />
     <child
@@ -409,17 +409,17 @@
     name="Link7">
     <inertial>
       <origin
-        xyz="-2.97087515144234E-08 -0.0434087591943531 0.0106558526512254"
+        xyz="-2.97087516809569E-08 -0.0434087591943532 0.0106596716155974"
         rpy="0 0 0" />
       <mass
         value="0.0256461121677846" />
       <inertia
-        ixx="6.46830326573713E-06"
-        ixy="2.39543800976369E-11"
-        ixz="4.6372130603958E-12"
-        iyy="5.13428741941764E-06"
-        iyz="1.26432048814165E-06"
-        izz="8.03606347912528E-06" />
+        ixx="6.46830326573709E-06"
+        ixy="2.39543801056837E-11"
+        ixz="4.6372130544053E-12"
+        iyy="5.13428741941763E-06"
+        iyz="1.26432048814164E-06"
+        izz="8.03606347912524E-06" />
     </inertial>
     <visual>
       <origin
@@ -427,12 +427,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link7.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link7.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
       </material>
     </visual>
     <collision>
@@ -441,7 +441,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link7.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link7.STL" />
       </geometry>
     </collision>
   </link>
@@ -449,7 +449,7 @@
     name="left_finger"
     type="prismatic">
     <origin
-      xyz="0.0002 -0.025469 0.13098"
+      xyz="-0.0002 -0.036537 0.13098"
       rpy="1.5708 0 0" />
     <parent
       link="Link6" />
@@ -458,26 +458,26 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-0.025"
+      lower="-0.05"
       upper="0"
       effort="5"
-      velocity="10" />
+      velocity="12" />
   </joint>
   <link
     name="Link8">
     <inertial>
       <origin
-        xyz="2.97087527356688E-08 0.0434087591943507 0.0106558526512254"
+        xyz="2.9708752458113E-08 0.0434087591943507 0.0106596716155974"
         rpy="0 0 0" />
       <mass
-        value="0.0256461121677874" />
+        value="0.0256461121677875" />
       <inertia
-        ixx="6.46830326573822E-06"
-        ixy="2.3954379824257E-11"
-        ixz="-4.63721284179035E-12"
-        iyy="5.13428741941821E-06"
-        iyz="-1.26432048814209E-06"
-        izz="8.03606347912602E-06" />
+        ixx="6.46830326573823E-06"
+        ixy="2.39543798195983E-11"
+        ixz="-4.63721285127558E-12"
+        iyy="5.13428741941822E-06"
+        iyz="-1.2643204881421E-06"
+        izz="8.03606347912604E-06" />
     </inertial>
     <visual>
       <origin
@@ -485,12 +485,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link8.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link8.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
       </material>
     </visual>
     <collision>
@@ -499,7 +499,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia-D_v5_5/gripper50mm/Link8.STL" />
+          filename="../../meshes/Alicia_D_v5_5/gripper100mm/Link8.STL" />
       </geometry>
     </collision>
   </link>
@@ -507,7 +507,7 @@
     name="right_finger"
     type="prismatic">
     <origin
-      xyz="0.0002 0.025469 0.13098"
+      xyz="-0.0002 0.036518 0.13098"
       rpy="-1.5708 0 0" />
     <parent
       link="Link6" />
@@ -517,8 +517,40 @@
       xyz="0 0 -1" />
     <limit
       lower="0"
-      upper="0.025"
+      upper="0.05"
       effort="5"
-      velocity="10" />
+      velocity="12" />
+  </joint>
+
+
+
+    <link
+    name="tool0">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.005" /> <!-- 定义一个半径为0.02米的小球体 -->
+      </geometry>
+      <material
+        name="green_virtual_sphere_material"> <!-- 可以给材质起个名字 -->
+        <color
+          rgba="0 1 0 1" /> <!-- 绿色 (R G B A)，A为1表示不透明 -->
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="Grasp2tool"
+    type="fixed">
+    <origin
+      xyz="-0.0002 -0.0003 0.13118"
+      rpy="0 0 0" />
+    <parent
+      link="Link6" />
+    <child
+      link="tool0" />
+    <axis
+      xyz="0 0 0" />
   </joint>
 </robot>
