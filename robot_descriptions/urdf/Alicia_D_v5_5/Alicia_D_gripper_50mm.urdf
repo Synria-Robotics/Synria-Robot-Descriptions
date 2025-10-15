@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="alicia_d_with_gripper">
+  name="Alicia_D_gripper_50mm">
  <mujoco>
     <compiler meshdir="../../meshes/Alicia_D_v5_5/gripper50mm/" discardvisual="false" />
     <contact>
@@ -108,7 +108,7 @@
     <child
       link="Link1" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
       lower="-2.7925"
       upper="2.7525"
@@ -166,7 +166,7 @@
     <child
       link="Link2" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
       lower="-2.443"
       upper="2.443"
@@ -224,7 +224,7 @@
     <child
       link="Link3" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
       lower="-2.06"
       upper="2.06"
@@ -282,7 +282,7 @@
     <child
       link="Link4" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
       lower="-2.7925"
       upper="2.7925"
@@ -340,7 +340,7 @@
     <child
       link="Link5" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
       lower="-2.095"
       upper="2.095"
