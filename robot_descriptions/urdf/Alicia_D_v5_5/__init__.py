@@ -15,5 +15,5 @@ _MODULE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Even if this version isn't used by the demo, it's good practice
 # to have it not cause an import error. Leaving it empty is also fine.
 
-Alicia_D_v5_5_gripper_100mm = SimpleNamespace()
-Alicia_D_v5_5_gripper_100mm.urdf = os.path.join(_MODULE_PATH, "Alicia_D_v5_5_gripper_100mm.urdf")
+Alicia_D_gripper_100mm = SimpleNamespace()
+Alicia_D_gripper_100mm.urdf = os.path.join(_MODULE_PATH, "Alicia_D_gripper_100mm.urdf")
