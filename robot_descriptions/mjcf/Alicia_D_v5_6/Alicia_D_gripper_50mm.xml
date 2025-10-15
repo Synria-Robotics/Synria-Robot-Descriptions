@@ -1,5 +1,5 @@
 <mujoco model="Alicia_D_gripper_50mm">
-  <compiler angle="radian" meshdir="../../meshes/Alicia_D_v5_6/gripper50mm/"/>
+  <compiler angle="radian" meshdir="../../meshes/Alicia_D_v5_6/gripper_50mm/"/>
   
   <asset>
     <mesh name="base_link" file="base_link.STL"/>
@@ -95,7 +95,3 @@
 
 
 </mujoco>
-
-
-
-
