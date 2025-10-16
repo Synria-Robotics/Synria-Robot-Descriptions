@@ -45,7 +45,6 @@ This repository contains URDF (Unified Robot Description Format) and MJCF (MuJoC
 
 #### Skeleton Version
 - **URDF**: [`Bessica_D_v1_0_Skeleton.urdf`](robot_descriptions/urdf/Bessica_D_v1_0/Bessica_D_Skeleton.urdf)
-- **MuJoCo XML**: [`Bessica_D_v1_0_Interactive.xml`](robot_descriptions/mjcf/Bessica_D_v1_0/Bessica_D_Interactive.xml)
 
 #### Covered Version
 - **URDF**: [`Bessica_D_v1_0_Covered.urdf`](robot_descriptions/urdf/Bessica_D_v1_0/Bessica_D_Covered.urdf)
@@ -57,4 +56,4 @@ This repository contains URDF (Unified Robot Description Format) and MJCF (MuJoC
 - MuJoCo (via MJCF)
 - Gazebo (via URDF)
 - PyBullet (via URDF)
-- Isaac Sim (via URDF)
+- Isaac Sim (via URDF/MJCF)

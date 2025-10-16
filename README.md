@@ -1,8 +1,8 @@
-# Synria 机器人描述文件
+# Synria Robotics 玄雅科技 | 机器人模型文件
 
 [English](README_EN.md) | 中文
 
-本仓库包含 Synria 机器人平台的 URDF（统一机器人描述格式）和 MJCF（MuJoCo 建模格式）模型。
+本仓库包含 Synria Robotics 玄雅科技机器人平台的 URDF（统一机器人描述格式）和 MJCF（MuJoCo 建模格式）模型。
 
 ## 仓库结构
 
@@ -48,7 +48,7 @@
 
 #### 无外壳版
 - **URDF**: [`Bessica_D_v1_0_Skeleton.urdf`](robot_descriptions/urdf/Bessica_D_v1_0/Bessica_D_Skeleton.urdf)
-- **MuJoCo XML**: [`Bessica_D_v1_0_Interactive.xml`](robot_descriptions/mjcf/Bessica_D_v1_0/Bessica_D_Interactive.xml)
+
 
 #### 带外壳版
 - **URDF**: [`Bessica_D_v1_0_Covered.urdf`](robot_descriptions/urdf/Bessica_D_v1_0/Bessica_D_Covered.urdf)
@@ -61,6 +61,6 @@
 - MuJoCo (通过 MJCF)
 - Gazebo (通过 URDF)
 - PyBullet (通过 URDF)
-- Isaac Sim (通过 URDF)
+- Isaac Sim (通过 URDF、MJCF)
 
 
