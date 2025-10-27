@@ -3,15 +3,15 @@
   <statistic center="-0.012496 0.000424702 0.622672" extent="1.93611" meansize="0.179951" />
 
   <asset>
-    <mesh name="base_link" content_type="model/stl" file="base_link.STL" />
-    <mesh name="Link1" content_type="model/stl" file="Link1.STL" />
-    <mesh name="Link2" content_type="model/stl" file="Link2.STL" />
-    <mesh name="Link3" content_type="model/stl" file="Link3.STL" />
-    <mesh name="Link4" content_type="model/stl" file="Link4.STL" />
-    <mesh name="Link5" content_type="model/stl" file="Link5.STL" />
-    <mesh name="Link6" content_type="model/stl" file="Link6.STL" />
-    <mesh name="Link7" content_type="model/stl" file="Link7.STL" />
-    <mesh name="Link8" content_type="model/stl" file="Link8.STL" />
+    <mesh name="base_link" file="base_link.STL" />
+    <mesh name="Link1" file="Link1.STL" />
+    <mesh name="Link2" file="Link2.STL" />
+    <mesh name="Link3" file="Link3.STL" />
+    <mesh name="Link4" file="Link4.STL" />
+    <mesh name="Link5" file="Link5.STL" />
+    <mesh name="Link6" file="Link6.STL" />
+    <mesh name="Link7" file="Link7.STL" />
+    <mesh name="Link8" file="Link8.STL" />
     <texture builtin="gradient" height="100" rgb1=".4 .5 .6" rgb2="0 0 0" type="skybox" width="100" />
     <texture builtin="checker" height="100" name="texplane" rgb1="1 1 1" rgb2=".8 .9 1" type="2d" width="100" />
     <material name="MatPlane" reflectance="0.5" texrepeat="1 1" texture="texplane" texuniform="true" />

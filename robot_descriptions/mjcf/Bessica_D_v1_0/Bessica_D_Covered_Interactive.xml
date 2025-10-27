@@ -3,27 +3,27 @@
   <statistic center="-0.012496 0.000424702 0.622672" extent="1.93611" meansize="0.179951" />
 
   <asset>
-    <mesh name="base_link" content_type="model/stl" file="base_link.STL" />
-    <mesh name="right_arm_base_link" content_type="model/stl" file="right_arm_base_link.STL" />
-    <mesh name="right_arm_link1" content_type="model/stl" file="right_arm_link1.STL" />
-    <mesh name="right_arm_link2" content_type="model/stl" file="right_arm_link2.STL" />
-    <mesh name="right_arm_link3" content_type="model/stl" file="right_arm_link3.STL" />
-    <mesh name="right_arm_link4" content_type="model/stl" file="right_arm_link4.STL" />
-    <mesh name="right_arm_link5" content_type="model/stl" file="right_arm_link5.STL" />
-    <mesh name="right_arm_link6" content_type="model/stl" file="right_arm_link6.STL" />
-    <mesh name="right_arm_link7" content_type="model/stl" file="right_arm_link7.STL" />
-    <mesh name="right_arm_gripper_left_finger" content_type="model/stl" file="right_arm_gripper_left_finger.STL" />
-    <mesh name="right_arm_gripper_right_finger" content_type="model/stl" file="right_arm_gripper_right_finger.STL" />
-    <mesh name="left_arm_base_link" content_type="model/stl" file="left_arm_base_link.STL" />
-    <mesh name="left_arm_link1" content_type="model/stl" file="left_arm_link1.STL" />
-    <mesh name="left_arm_link2" content_type="model/stl" file="left_arm_link2.STL" />
-    <mesh name="left_arm_link3" content_type="model/stl" file="left_arm_link3.STL" />
-    <mesh name="left_arm_link4" content_type="model/stl" file="left_arm_link4.STL" />
-    <mesh name="left_arm_link5" content_type="model/stl" file="left_arm_link5.STL" />
-    <mesh name="left_arm_link6" content_type="model/stl" file="left_arm_link6.STL" />
-    <mesh name="left_arm_link7" content_type="model/stl" file="left_arm_link7.STL" />
-    <mesh name="left_arm_gripper_left_finger" content_type="model/stl" file="left_arm_gripper_left_finger.STL" />
-    <mesh name="left_arm_gripper_right_finger" content_type="model/stl" file="left_arm_gripper_right_finger.STL" />
+    <mesh name="base_link" file="base_link.STL" />
+    <mesh name="right_arm_base_link" file="right_arm_base_link.STL" />
+    <mesh name="right_arm_link1" file="right_arm_link1.STL" />
+    <mesh name="right_arm_link2" file="right_arm_link2.STL" />
+    <mesh name="right_arm_link3" file="right_arm_link3.STL" />
+    <mesh name="right_arm_link4" file="right_arm_link4.STL" />
+    <mesh name="right_arm_link5" file="right_arm_link5.STL" />
+    <mesh name="right_arm_link6" file="right_arm_link6.STL" />
+    <mesh name="right_arm_link7" file="right_arm_link7.STL" />
+    <mesh name="right_arm_gripper_left_finger" file="right_arm_gripper_left_finger.STL" />
+    <mesh name="right_arm_gripper_right_finger" file="right_arm_gripper_right_finger.STL" />
+    <mesh name="left_arm_base_link" file="left_arm_base_link.STL" />
+    <mesh name="left_arm_link1" file="left_arm_link1.STL" />
+    <mesh name="left_arm_link2" file="left_arm_link2.STL" />
+    <mesh name="left_arm_link3" file="left_arm_link3.STL" />
+    <mesh name="left_arm_link4" file="left_arm_link4.STL" />
+    <mesh name="left_arm_link5" file="left_arm_link5.STL" />
+    <mesh name="left_arm_link6" file="left_arm_link6.STL" />
+    <mesh name="left_arm_link7" file="left_arm_link7.STL" />
+    <mesh name="left_arm_gripper_left_finger" file="left_arm_gripper_left_finger.STL" />
+    <mesh name="left_arm_gripper_right_finger" file="left_arm_gripper_right_finger.STL" />
     <texture builtin="gradient" height="100" rgb1=".4 .5 .6" rgb2="0 0 0" type="skybox" width="100" />
     <texture builtin="checker" height="100" name="texplane" rgb1="1 1 1" rgb2=".8 .9 1" type="2d" width="100" />
     <material name="MatPlane" reflectance="0.5" texrepeat="1 1" texture="texplane" texuniform="true" />
