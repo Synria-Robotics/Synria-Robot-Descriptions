@@ -1,5 +1,6 @@
 <mujoco model="Bessica-D_Covered">
   <compiler angle="radian" meshdir="../../meshes/Bessica_D_v1_0/withCover" />
+  <statistic center="-0.012496 0.000424702 0.622672" extent="1.93611" meansize="0.179951" />
 
   <asset>
     <mesh name="base_link" file="base_link.STL" />
