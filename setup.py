@@ -27,7 +27,9 @@ setup(
     author="Synria Robotics",
     author_email="support@synriarobotics.ai",
     description="URDF and MJCF robot description files for Synria robotic platforms.",
-    long_description=open('README.md').read(),
+    # MODIFIED: Added encoding='utf-8' to ensure cross-platform compatibility,
+    # especially for Windows, preventing UnicodeDecodeError.
+    long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Synria-Robotics/Synria-robot-descriptions",
     # Find the dummy package we created
