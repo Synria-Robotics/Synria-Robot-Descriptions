@@ -26,3 +26,17 @@ __author__ = "Synria Robotics Team"
 __copyright__ = "Copyright (c) 2025 Synria Robotics Co., Ltd."
 __license__ = "GPL-3.0"
 
+
+# 导出子包，允许通过 `robot_descriptions.urdf` / `robot_descriptions.mjcf` / `robot_descriptions.meshes` 访问
+from . import urdf  # noqa: F401
+from . import mjcf  # noqa: F401
+from . import meshes  # noqa: F401
+
+__all__ = [
+    "urdf",
+    "mjcf",
+    "meshes",
+    "__version__",
+    "__author__",
+    "__license__",
+]
