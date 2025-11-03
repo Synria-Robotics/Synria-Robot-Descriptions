@@ -1,4 +1,4 @@
-# Synria Robotics 玄雅科技 | 机器人模型文件
+# SynriaRD: Synria Robotics 玄雅科技 | 机器人标准模型文件
 
 [English](README_EN.md) | 中文
 
@@ -7,7 +7,7 @@
 ## 仓库结构
 
 ```
-├── robot_descriptions
+├── synriard
 │   ├── meshes
 │   │   ├── Alicia_D_v5_5
 │   │   ├── Alicia_D_v5_6

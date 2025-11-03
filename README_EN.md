@@ -1,4 +1,4 @@
-# Synria Robot Descriptions
+# SynriaRD: Synria Robot Descriptions
 
 English | [中文](README.md)
 
@@ -7,7 +7,7 @@ This repository contains URDF (Unified Robot Description Format) and MJCF (MuJoC
 ## Repository Structure
 
 ```
-├── robot_descriptions
+├── synriard
 │   ├── meshes
 │   │   ├── Alicia_D_v5_5
 │   │   ├── Alicia_D_v5_6
