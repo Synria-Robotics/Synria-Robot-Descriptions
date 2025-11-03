@@ -89,6 +89,27 @@ print(list_available_models(model_format="urdf", show_path=True))
 - **MuJoCo XML (交互式)**: [`Bessica_D_v1_0_covered_interactive.xml`](synriard/mjcf/Bessica_D_v1_0/Bessica_D_v1_0_covered_interactive.xml)
 
 
+## 添加新机器人模型
+
+添加新机器人模型后，运行自动化脚本自动生成所需的 `__init__.py` 文件：
+
+```bash
+# 1. 添加模型文件到对应目录
+mkdir -p synriard/mjcf/RobotName_v1_0
+cp RobotName_v1_0_gripper_100mm.xml synriard/mjcf/RobotName_v1_0/
+
+# 2. 运行自动化脚本
+python3 auto_generate_init.py
+
+# 脚本会自动：
+# - 生成每个机器人目录的 __init__.py
+# - 更新父目录的 __init__.py 注册所有机器人
+```
+
+脚本选项：
+- `--format mjcf|urdf|all`: 指定处理的格式（默认：all）
+- `--synriard-path PATH`: 指定 synriard 目录路径（默认：自动检测）
+
 ## 支持的仿真环境
 
 - ROS/ROS2 (通过 URDF)
