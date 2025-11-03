@@ -8,21 +8,53 @@
 
 ```
 ├── synriard
-│   ├── meshes
-│   │   ├── Alicia_D_v5_5
-│   │   ├── Alicia_D_v5_6
-│   │   ├── Alicia_M_v1_0
-│   │   └── Bessica_D_v1_0
-│   ├── mjcf
-│   │   ├── Alicia_D_v5_5
-│   │   ├── Alicia_D_v5_6
+│   ├── meshes
+│   │   ├── Alicia_D_v5_5
+│   │   ├── Alicia_D_v5_6
 │   │   ├── Alicia_M_v1_0
-│   │   └── Bessica_D_v1_0
-│   └── urdf
-│       ├── Alicia_D_v5_5
-│       ├── Alicia_D_v5_6
-│       ├── Alicia_M_v1_0
-│       └── Bessica_D_v1_0
+│   │   └── Bessica_D_v1_0
+│   ├── mjcf
+│   │   ├── Alicia_D_v5_5
+│   │   ├── Alicia_D_v5_6
+│   │   ├── Alicia_M_v1_0
+│   │   └── Bessica_D_v1_0
+│   └── urdf
+│       ├── Alicia_D_v5_5
+│       ├── Alicia_D_v5_6
+│       ├── Alicia_M_v1_0
+│       └── Bessica_D_v1_0
+```
+
+## 命名规范
+
+所有模型文件遵循统一的命名格式：`{name}_{version}_{variant}.{ext}`
+
+- **name**: 机器人名称（如 `Alicia_D`, `Alicia_M`, `Bessica_D`）
+- **version**: 版本号（如 `v5_5`, `v5_6`, `v1_0`）
+- **variant**: 变体标识
+  - 对于带夹爪的机器人（Alicia_D, Alicia_M）：`gripper_{size}`（如 `gripper_50mm`, `gripper_100mm`）
+  - 对于其他变体（Bessica_D）：直接使用变体名（如 `covered`, `skeleton`, `covered_Interactive`）
+- **ext**: 文件扩展名（`.urdf` 或 `.xml`）
+
+### 示例
+
+- `Alicia_D_v5_6_gripper_50mm.urdf` - Alicia_D v5.6 版本，50mm 夹爪
+- `Alicia_M_v1_0_gripper_100mm.urdf` - Alicia_M v1.0 版本，100mm 夹爪
+- `Bessica_D_v1_0_covered.urdf` - Bessica_D v1.0 版本，带外壳变体
+- `Bessica_D_v1_0_covered_Interactive.xml` - Bessica_D v1.0 版本，带外壳交互式变体（MJCF）
+
+### 使用 API
+
+```python
+from synriard import get_model_path, list_available_models
+
+# 获取模型路径
+urdf_path = get_model_path("Alicia_D", version="v5_6", variant="gripper_50mm")
+mjcf_path = get_model_path("Alicia_D", version="v5_6", variant="gripper_50mm", model_format="mjcf")
+
+# 列出所有可用模型
+print(list_available_models(model_format="urdf"))
+print(list_available_models(model_format="urdf", show_path=True))
 ```
 
 ## 产品
@@ -31,7 +63,7 @@
 - **描述**: 灵动操作臂
 - **自由度**： 6
 - **夹爪配置**：50mm 和 100mm
-- **位置**：[`Alicia_D_v5_5`](robot_descriptions/urdf/Alicia_D_v5_5)和[`Alicia_D_v5_6`](robot_descriptions/urdf/Alicia_D_v5_6)
+- **位置**：[`Alicia_D_v5_5`](synriard/urdf/Alicia_D_v5_5)和[`Alicia_D_v5_6`](synriard/urdf/Alicia_D_v5_6)
 
 
 
@@ -39,7 +71,7 @@
 
 - **描述**: 云擎操作臂
 - **自由度**： 6
-- **位置**: [`Alicia_M_v1_0.urdf`](robot_descriptions/urdf/Alicia_M_v1_0/Alicia_M_v1_0.urdf)
+- **位置**: [`Alicia_M_v1_0_gripper_100mm.urdf`](synriard/urdf/Alicia_M_v1_0/Alicia_M_v1_0_gripper_100mm.urdf)
 
 ### Bessica-D 
 - **描述**: 灵越双臂人形机器人
@@ -47,12 +79,14 @@
 - **外观**：无外壳版和外壳版
 
 #### 无外壳版
-- **URDF**: [`Bessica_D_v1_0_Skeleton.urdf`](robot_descriptions/urdf/Bessica_D_v1_0/Bessica_D_Skeleton.urdf)
+- **URDF**: [`Bessica_D_v1_0_skeleton.urdf`](synriard/urdf/Bessica_D_v1_0/Bessica_D_v1_0_skeleton.urdf)
+- **MuJoCo XML**: [`Bessica_D_v1_0_skeleton.xml`](synriard/mjcf/Bessica_D_v1_0/Bessica_D_v1_0_skeleton.xml)
 
 
 #### 带外壳版
-- **URDF**: [`Bessica_D_v1_0_Covered.urdf`](robot_descriptions/urdf/Bessica_D_v1_0/Bessica_D_Covered.urdf)
-- **MuJoCo XML**: [`Bessica_D_v1_0_Covered.xml`](robot_descriptions/mjcf/Bessica_D_v1_0/Bessica_D_Covered.xml)
+- **URDF**: [`Bessica_D_v1_0_covered.urdf`](synriard/urdf/Bessica_D_v1_0/Bessica_D_v1_0_covered.urdf)
+- **MuJoCo XML**: [`Bessica_D_v1_0_covered.xml`](synriard/mjcf/Bessica_D_v1_0/Bessica_D_v1_0_covered.xml)
+- **MuJoCo XML (交互式)**: [`Bessica_D_v1_0_covered_Interactive.xml`](synriard/mjcf/Bessica_D_v1_0/Bessica_D_v1_0_covered_Interactive.xml)
 
 
 ## 支持的仿真环境

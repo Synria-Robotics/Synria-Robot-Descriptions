@@ -563,12 +563,12 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <sphere radius="0.005" /> <!-- 定义一个半径为0.02米的小球体 -->
+        <sphere radius="0.005" /> <!-- Define a small sphere with radius 0.005m -->
       </geometry>
       <material
-        name="green_virtual_sphere_material"> <!-- 可以给材质起个名字 -->
+        name="green_virtual_sphere_material"> <!-- Material name for the virtual sphere -->
         <color
-          rgba="0 1 0 1" /> <!-- 绿色 (R G B A)，A为1表示不透明 -->
+          rgba="0 1 0 1" /> <!-- Green color (R G B A), A=1 means opaque -->
       </material>
     </visual>
   </link>
