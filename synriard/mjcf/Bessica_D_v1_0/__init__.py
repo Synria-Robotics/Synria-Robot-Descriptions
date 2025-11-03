@@ -10,5 +10,5 @@ Bessica_D_v1_0_covered.xml = os.path.join(_MODULE_PATH, "Bessica_D_v1_0_covered.
 Bessica_D_v1_0_skeleton = SimpleNamespace()
 Bessica_D_v1_0_skeleton.xml = os.path.join(_MODULE_PATH, "Bessica_D_v1_0_skeleton.xml")
 
-Bessica_D_v1_0_covered_Interactive = SimpleNamespace()
-Bessica_D_v1_0_covered_Interactive.xml = os.path.join(_MODULE_PATH, "Bessica_D_v1_0_covered_Interactive.xml")
+Bessica_D_v1_0_covered_interactive = SimpleNamespace()
+Bessica_D_v1_0_covered_interactive.xml = os.path.join(_MODULE_PATH, "Bessica_D_v1_0_covered_interactive.xml")

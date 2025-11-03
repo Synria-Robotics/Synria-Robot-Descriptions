@@ -33,7 +33,7 @@
 - **version**: 版本号（如 `v5_5`, `v5_6`, `v1_0`）
 - **variant**: 变体标识
   - 对于带夹爪的机器人（Alicia_D, Alicia_M）：`gripper_{size}`（如 `gripper_50mm`, `gripper_100mm`）
-  - 对于其他变体（Bessica_D）：直接使用变体名（如 `covered`, `skeleton`, `covered_Interactive`）
+  - 对于其他变体（Bessica_D）：直接使用变体名（如 `covered`, `skeleton`, `covered_interactive`）
 - **ext**: 文件扩展名（`.urdf` 或 `.xml`）
 
 ### 示例
@@ -41,7 +41,7 @@
 - `Alicia_D_v5_6_gripper_50mm.urdf` - Alicia_D v5.6 版本，50mm 夹爪
 - `Alicia_M_v1_0_gripper_100mm.urdf` - Alicia_M v1.0 版本，100mm 夹爪
 - `Bessica_D_v1_0_covered.urdf` - Bessica_D v1.0 版本，带外壳变体
-- `Bessica_D_v1_0_covered_Interactive.xml` - Bessica_D v1.0 版本，带外壳交互式变体（MJCF）
+- `Bessica_D_v1_0_covered_interactive.xml` - Bessica_D v1.0 版本，带外壳交互式变体（MJCF）
 
 ### 使用 API
 
@@ -86,7 +86,7 @@ print(list_available_models(model_format="urdf", show_path=True))
 #### 带外壳版
 - **URDF**: [`Bessica_D_v1_0_covered.urdf`](synriard/urdf/Bessica_D_v1_0/Bessica_D_v1_0_covered.urdf)
 - **MuJoCo XML**: [`Bessica_D_v1_0_covered.xml`](synriard/mjcf/Bessica_D_v1_0/Bessica_D_v1_0_covered.xml)
-- **MuJoCo XML (交互式)**: [`Bessica_D_v1_0_covered_Interactive.xml`](synriard/mjcf/Bessica_D_v1_0/Bessica_D_v1_0_covered_Interactive.xml)
+- **MuJoCo XML (交互式)**: [`Bessica_D_v1_0_covered_interactive.xml`](synriard/mjcf/Bessica_D_v1_0/Bessica_D_v1_0_covered_interactive.xml)
 
 
 ## 支持的仿真环境

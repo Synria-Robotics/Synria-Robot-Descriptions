@@ -1,2 +1,6 @@
 .DS_Store
 rdf/
+/synriard.egg-info
+/synriard/__pycache__
+__pycache__
+*.pyc
