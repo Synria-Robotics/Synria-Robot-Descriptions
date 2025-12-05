@@ -90,5 +90,16 @@
     <exclude body1="Link7" body2="Link8" />
   </contact>
 
+  <actuator>
+    <position name="Joint1" joint="Joint1" kp="100" kv="10" ctrlrange="-2.16 2.16" />
+    <position name="Joint2" joint="Joint2" kp="100" kv="10" ctrlrange="-1.57 1.57" />
+    <position name="Joint3" joint="Joint3" kp="100" kv="10" ctrlrange="-0.5 2.35619" />
+    <position name="Joint4" joint="Joint4" kp="100" kv="10" ctrlrange="-2.7925 2.7925" />
+    <position name="Joint5" joint="Joint5" kp="100" kv="10" ctrlrange="-1.57 1.57" />
+    <position name="Joint6" joint="Joint6" kp="100" kv="10" ctrlrange="-3.14 3.14" />
+    <position name="left_finger" joint="left_finger" kp="100" kv="10" ctrlrange="-0.05 0" />
+    <position name="right_finger" joint="right_finger" kp="100" kv="10" ctrlrange="0 0.05" />
+  </actuator>
+
 
 </mujoco>
