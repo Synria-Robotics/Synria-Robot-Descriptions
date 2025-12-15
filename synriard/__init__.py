@@ -68,7 +68,7 @@ def get_model_path(name, version=None, variant=None, model_format="urdf"):
 
     # Build variant object name
     # All models follow {name}_{version}_{variant} naming convention
-    if name in {"Alicia_D", "Alicia_M", "Bessica_D"} and version and variant:
+    if name in {"Alicia_D", "Alicia_M", "Bessica_D", "Bessica_M"} and version and variant:
         variant_obj_name = f"{name}_{version}_{variant}"
     else:
         variant_obj_name = None
@@ -202,6 +202,8 @@ def list_available_models(model_format="urdf", show_path=False):
                                 variant = variant_attr.replace(pattern, "")
                             else:
                                 variant = None
+                        elif name == "Bessica_M":
+                            variant = None  # No variants for Bessica_M
                         else:
                             variant = None
 
