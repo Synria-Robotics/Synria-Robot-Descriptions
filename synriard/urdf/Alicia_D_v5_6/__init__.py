@@ -12,3 +12,6 @@ Alicia_D_v5_6_gripper_100mm.urdf = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_gri
 
 Alicia_D_v5_6_gripper_50mm = SimpleNamespace()
 Alicia_D_v5_6_gripper_50mm.urdf = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_gripper_50mm.urdf")
+
+Alicia_D_v5_6_vertical_50mm = SimpleNamespace()
+Alicia_D_v5_6_vertical_50mm.urdf = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_vertical_50mm.urdf")
