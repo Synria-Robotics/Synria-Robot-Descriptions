@@ -401,10 +401,10 @@
     <child
       link="right_arm_link4" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="-0.5236"
-      upper="2.95"
+      lower="-2.95"
+      upper="0.5236"
       effort="5"
       velocity="12" />
   </joint>
@@ -1006,10 +1006,10 @@
     <child
       link="left_arm_link4" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="-0.5236"
-      upper="2.95"
+      lower="-2.95"
+      upper="0.5236"
       effort="5"
       velocity="12" />
   </joint>
