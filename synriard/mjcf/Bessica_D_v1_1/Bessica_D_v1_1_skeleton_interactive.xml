@@ -155,6 +155,52 @@
         </body>
       </body>
     </body>
+
+    <!-- Interactive mocap targets for IK visualization -->
+    <!-- Left arm target: Red coordinate frame -->
+    <body name="left_target" mocap="true" pos="0.4 0.3 1.2">
+      <!-- X axis - Red -->
+      <geom type="cylinder" size="0.003 0.05" rgba="1 0 0 0.8" contype="0" conaffinity="0" fromto="0 0 0 0.1 0 0" />
+      <geom type="sphere" size="0.008" rgba="1 0 0 0.9" contype="0" conaffinity="0" pos="0.1 0 0" />
+      <!-- Y axis - Green -->
+      <geom type="cylinder" size="0.003 0.05" rgba="0 1 0 0.8" contype="0" conaffinity="0" fromto="0 0 0 0 0.1 0" />
+      <geom type="sphere" size="0.008" rgba="0 1 0 0.9" contype="0" conaffinity="0" pos="0 0.1 0" />
+      <!-- Z axis - Blue -->
+      <geom type="cylinder" size="0.003 0.05" rgba="0 0 1 0.8" contype="0" conaffinity="0" fromto="0 0 0 0 0 0.1" />
+      <geom type="sphere" size="0.008" rgba="0 0 1 0.9" contype="0" conaffinity="0" pos="0 0 0.1" />
+      <!-- Origin sphere -->
+      <geom type="sphere" size="0.015" rgba="1 0.5 0.5 0.6" contype="0" conaffinity="0" pos="0 0 0" />
+    </body>
+
+    <!-- Right arm target: Blue coordinate frame -->
+    <body name="right_target" mocap="true" pos="0.4 -0.3 1.2">
+      <!-- X axis - Red -->
+      <geom type="cylinder" size="0.003 0.05" rgba="1 0 0 0.8" contype="0" conaffinity="0" fromto="0 0 0 0.1 0 0" />
+      <geom type="sphere" size="0.008" rgba="1 0 0 0.9" contype="0" conaffinity="0" pos="0.1 0 0" />
+      <!-- Y axis - Green -->
+      <geom type="cylinder" size="0.003 0.05" rgba="0 1 0 0.8" contype="0" conaffinity="0" fromto="0 0 0 0 0.1 0" />
+      <geom type="sphere" size="0.008" rgba="0 1 0 0.9" contype="0" conaffinity="0" pos="0 0.1 0" />
+      <!-- Z axis - Blue -->
+      <geom type="cylinder" size="0.003 0.05" rgba="0 0 1 0.8" contype="0" conaffinity="0" fromto="0 0 0 0 0 0.1" />
+      <geom type="sphere" size="0.008" rgba="0 0 1 0.9" contype="0" conaffinity="0" pos="0 0 0.1" />
+      <!-- Origin sphere -->
+      <geom type="sphere" size="0.015" rgba="0.5 0.5 1 0.6" contype="0" conaffinity="0" pos="0 0 0" />
+    </body>
+
+    <!-- Center target: Green coordinate frame -->
+    <body name="center_target" mocap="true" pos="0.4 0.0 1.2">
+      <!-- X axis - Red -->
+      <geom type="cylinder" size="0.0025 0.04" rgba="1 0 0 0.8" contype="0" conaffinity="0" fromto="0 0 0 0.08 0 0" />
+      <geom type="sphere" size="0.006" rgba="1 0 0 0.9" contype="0" conaffinity="0" pos="0.08 0 0" />
+      <!-- Y axis - Green -->
+      <geom type="cylinder" size="0.0025 0.04" rgba="0 1 0 0.8" contype="0" conaffinity="0" fromto="0 0 0 0 0.08 0" />
+      <geom type="sphere" size="0.006" rgba="0 1 0 0.9" contype="0" conaffinity="0" pos="0 0.08 0" />
+      <!-- Z axis - Blue -->
+      <geom type="cylinder" size="0.0025 0.04" rgba="0 0 1 0.8" contype="0" conaffinity="0" fromto="0 0 0 0 0 0.08" />
+      <geom type="sphere" size="0.006" rgba="0 0 1 0.9" contype="0" conaffinity="0" pos="0 0 0.08" />
+      <!-- Origin sphere -->
+      <geom type="sphere" size="0.012" rgba="0.5 1 0.5 0.6" contype="0" conaffinity="0" pos="0 0 0" />
+    </body>
   </worldbody>
 
   <contact>
