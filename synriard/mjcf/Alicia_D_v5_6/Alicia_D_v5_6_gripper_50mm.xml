@@ -32,12 +32,12 @@
         <geom type="mesh" rgba="0.796078 0.823529 0.937255 1" mesh="Link1"/>
         <body name="Link2" pos="0 0 0.04287" quat="0.499998 0.5 0.5 -0.500002">
           <inertial pos="-0.150589 0.000866069 -0.000650951" quat="0.680967 0.18776 0.185184 0.683182" mass="0.207034" diaginertia="0.00020571 0.000131041 0.000119814"/>
-          <joint name="Joint2" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-5 5"/>
+          <joint name="Joint2" pos="0 0 0" axis="0 0 1" range="-2 2" actuatorfrcrange="-5 5"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.807843 0.843137 0.905882 1" mesh="Link2"/>
           <geom type="mesh" rgba="0.807843 0.843137 0.905882 1" mesh="Link2"/>
           <body name="Link3" pos="-0.22367 0.022492 -5e-05" quat="0.382681 0 0 0.923881">
             <inertial pos="0.00248144 -0.0557863 0.000269721" quat="0.505129 0.478686 -0.468559 0.544203" mass="0.0845576" diaginertia="8.09971e-05 7.62965e-05 2.81294e-05"/>
-            <joint name="Joint3" pos="0 0 0" axis="0 0 1" range="-0.78 3.14" actuatorfrcrange="-5 5"/>
+            <joint name="Joint3" pos="0 0 0" axis="0 0 1" range="-0.5 3.14159" actuatorfrcrange="-5 5"/>
             <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="Link3"/>
             <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link3"/>
             <body name="Link4" pos="-0.00211 -0.099 0.0002" quat="-2.59734e-06 2.59735e-06 0.707108 -0.707105">
@@ -52,7 +52,7 @@
                 <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Link5"/>
                 <body name="Link6" pos="-0.00385 -0.0575 0.001" quat="0.707105 -0.707108 0 0">
                   <inertial pos="-0.0274898 1.78816e-05 -0.0342551" quat="0.587235 0.586837 -0.394197 0.394189" mass="0.130365" diaginertia="8.46616e-05 7.44396e-05 3.53175e-05"/>
-                  <joint name="Joint6" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" actuatorfrcrange="-5 5"/>
+                  <joint name="Joint6" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" actuatorfrcrange="-5 5"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="Link6"/>
                   <geom type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="Link6"/>
                   <geom size="0.005" pos="0.0002 0 -0.13098" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
