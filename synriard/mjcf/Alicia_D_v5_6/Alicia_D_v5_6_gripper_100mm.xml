@@ -1,16 +1,16 @@
 <mujoco model="Alicia_D_v5_6_gripper_100mm">
-  <compiler angle="radian" meshdir="../../meshes/Alicia_D_v5_6/gripper_100mm/"/>
+  <compiler angle="radian" meshdir="../../meshes/Alicia_D_v5_6/follower_standard/"/>
 
   <asset>
     <mesh name="base_link" file="base_link.STL"/>
     <mesh name="Link1" file="Link1.STL"/>
     <mesh name="Link2" file="Link2.STL"/>
     <mesh name="Link3" file="Link3.STL"/>
-    <mesh name="Link4" file="Link4.STL"/>
+    <mesh name="Link4" file="Link4_100mm.STL"/>
     <mesh name="Link5" file="Link5.STL"/>
-    <mesh name="Link6" file="Link6.STL"/>
-    <mesh name="left_gripper" file="left_gripper.STL"/>
-    <mesh name="right_gripper" file="right_gripper.STL"/>
+    <mesh name="Link6" file="Link6_100mm.STL"/>
+    <mesh name="left_gripper" file="left_gripper_100mm.STL"/>
+    <mesh name="right_gripper" file="right_gripper_100mm.STL"/>
     <texture builtin="gradient" height="100" rgb1=".4 .5 .6" rgb2="0 0 0" type="skybox" width="100" />
     <texture builtin="checker" height="100" name="texplane" rgb1="1 1 1" rgb2=".8 .9 1" type="2d" width="100" />
     <material name="MatPlane" reflectance="0.5" texrepeat="1 1" texture="texplane" texuniform="true" />
