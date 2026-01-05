@@ -1,4 +1,4 @@
-<mujoco model="lingdong_100mm">
+<mujoco model="Alicia_D_v5_6_gripper_100mm">
   <compiler angle="radian" meshdir="../../meshes/Alicia_D_v5_6/gripper_100mm/"/>
 
   <asset>
