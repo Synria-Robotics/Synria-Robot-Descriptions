@@ -79,19 +79,13 @@
                     <joint name="right_arm_joint7" pos="0 0 0" axis="0 0 1" range="-1.448 1.448" actuatorfrcrange="-5 5"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.807843 0.843137 0.905882 1" mesh="right_arm_link7"/>
                     <geom type="mesh" rgba="0.807843 0.843137 0.905882 1" mesh="right_arm_link7"/>
+                    <geom pos="0.14128 -0.0505 0.00015" quat="0.707105 -0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="right_arm_gripper_left_finger"/>
+                    <geom pos="0.14128 -0.0505 0.00015" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="right_arm_gripper_left_finger"/>
+                    <geom pos="0.14128 0.0505 0.00015" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="right_arm_gripper_right_finger"/>
+                    <geom pos="0.14128 0.0505 0.00015" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="right_arm_gripper_right_finger"/>
                     <geom size="0.005" pos="0.14128 0 0.00015" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
-                    <body name="right_arm_gripper_left_finger" pos="0.14128 -0.0505 0.00015" quat="0.707105 -0.707108 0 0">
-                      <inertial pos="-0.0434087 -1.82028e-08 -0.0106596" quat="1.78291e-06 0.569751 -6.43145e-06 0.821818" mass="0.0256463" diaginertia="8.50963e-06 6.46826e-06 4.6607e-06"/>
-                      <joint name="right_arm_gripper_joint1" pos="0 0 0" axis="0 0 -1" type="slide" range="-0.05 0" actuatorfrcrange="-5 5"/>
-                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="right_arm_gripper_left_finger"/>
-                      <geom type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="right_arm_gripper_left_finger"/>
-                    </body>
-                    <body name="right_arm_gripper_right_finger" pos="0.14128 0.0505 0.00015" quat="0.707105 0.707108 0 0">
-                      <inertial pos="-0.0434087 -1.27591e-08 -0.0106596" quat="1.78291e-06 0.569751 -6.43145e-06 0.821818" mass="0.0256463" diaginertia="8.50963e-06 6.46826e-06 4.6607e-06"/>
-                      <joint name="right_arm_gripper_joint2" pos="0 0 0" axis="0 0 1" type="slide" range="0 0.05" actuatorfrcrange="-5 5"/>
-                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="right_arm_gripper_right_finger"/>
-                      <geom type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="right_arm_gripper_right_finger"/>
-                    </body>
+                    <!-- Gripper center site (between fingers) -->
+                    <site name="right_gripper_center" pos="0.14128 0 0.00015" size="0.005" rgba="1 0 0 0.5" />
                   </body>
                 </body>
               </body>
@@ -134,19 +128,13 @@
                     <joint name="left_arm_joint7" pos="0 0 0" axis="0 0 -1" range="-1.448 1.448" actuatorfrcrange="-5 5"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.807843 0.843137 0.905882 1" mesh="left_arm_link7"/>
                     <geom type="mesh" rgba="0.807843 0.843137 0.905882 1" mesh="left_arm_link7"/>
+                    <geom pos="0.14058 -0.054652 0.00015" quat="0.707105 -0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="left_arm_gripper_left_finger"/>
+                    <geom pos="0.14058 -0.054652 0.00015" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="left_arm_gripper_left_finger"/>
+                    <geom pos="0.14058 0.046348 0.00015" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="left_arm_gripper_right_finger"/>
+                    <geom pos="0.14058 0.046348 0.00015" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="left_arm_gripper_right_finger"/>
                     <geom size="0.005" pos="0.14058 -0.0041524 0.00015" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
-                    <body name="left_arm_gripper_right_finger" pos="0.14058 0.046348 0.00015" quat="0.707105 0.707108 0 0">
-                      <inertial pos="-0.0434087 1.54744e-08 0.11166" quat="-6.42992e-06 0.821818 1.78243e-06 0.569751" mass="0.0256463" diaginertia="8.50963e-06 6.46826e-06 4.6607e-06"/>
-                      <joint name="left_arm_gripper_joint1" pos="0 0 0" axis="0 0 1" type="slide" range="-0.05 0" actuatorfrcrange="-5 5"/>
-                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="left_arm_gripper_right_finger"/>
-                      <geom type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="left_arm_gripper_right_finger"/>
-                    </body>
-                    <body name="left_arm_gripper_left_finger" pos="0.14058 -0.054652 0.00015" quat="0.707105 -0.707108 0 0">
-                      <inertial pos="-0.0434087 1.54744e-08 0.11166" quat="-6.42992e-06 0.821818 1.78243e-06 0.569751" mass="0.0256463" diaginertia="8.50963e-06 6.46826e-06 4.6607e-06"/>
-                      <joint name="left_arm_gripper_joint2" pos="0 0 0" axis="0 0 -1" type="slide" range="0 0.05" actuatorfrcrange="-5 5"/>
-                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.592157 0.666667 0.682353 1" mesh="left_arm_gripper_left_finger"/>
-                      <geom type="mesh" rgba="0.592157 0.666667 0.682353 1" mesh="left_arm_gripper_left_finger"/>
-                    </body>
+                    <!-- Gripper center site (between fingers) -->
+                    <site name="left_gripper_center" pos="0.14058 -0.0041524 0.00015" size="0.005" rgba="0 0 1 0.5" />
                   </body>
                 </body>
               </body>
@@ -212,8 +200,6 @@
     <exclude body1="left_arm_link4" body2="left_arm_link5" />
     <exclude body1="left_arm_link5" body2="left_arm_link6" />
     <exclude body1="left_arm_link6" body2="left_arm_link7" />
-    <exclude body1="left_arm_link7" body2="left_arm_gripper_left_finger" />
-    <exclude body1="left_arm_link7" body2="left_arm_gripper_right_finger" />
 
     <exclude body1="base_link" body2="right_arm_link1" />
     <exclude body1="right_arm_link1" body2="right_arm_link2" />
@@ -223,9 +209,6 @@
     <exclude body1="right_arm_link4" body2="right_arm_link5" />
     <exclude body1="right_arm_link5" body2="right_arm_link6" />
     <exclude body1="right_arm_link6" body2="right_arm_link7" />
-    <exclude body1="right_arm_link7" body2="right_arm_gripper_left_finger" />
-    <exclude body1="right_arm_link7" body2="right_arm_gripper_right_finger" />
   </contact>
-
 
 </mujoco>
