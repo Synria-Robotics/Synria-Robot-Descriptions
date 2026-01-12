@@ -290,7 +290,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint1"
+    name="Right_joint1"
     type="revolute">
     <origin
       xyz="-0.146389856983547 0.288056431115987 0"
@@ -348,7 +348,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint2"
+    name="Right_joint2"
     type="revolute">
     <origin
       xyz="9.9999999999878E-05 0.0649999999999999 0"
@@ -406,7 +406,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint3"
+    name="Right_joint3"
     type="revolute">
     <origin
       xyz="0.00889252372646782 -0.0694320081404333 0"
@@ -464,7 +464,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint4"
+    name="Right_joint4"
     type="revolute">
     <origin
       xyz="0 0 0.15105"
@@ -522,7 +522,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint5"
+    name="Right_joint5"
     type="revolute">
     <origin
       xyz="0 -0.0983000000000001 0.00117500000000332"
@@ -532,10 +532,10 @@
     <child
       link="Right_arm_link5" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.04"
-      upper="0.52"
+      lower="-0.52"
+      upper="1.04"
       effort="5"
       velocity="10" />
   </joint>
@@ -580,7 +580,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint6"
+    name="Right_joint6"
     type="revolute">
     <origin
       xyz="0.000499999999999251 -0.00117500000000305 0.139500000000004"
@@ -638,7 +638,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint7"
+    name="Right_joint7"
     type="revolute">
     <origin
       xyz="0 0 0"
@@ -696,7 +696,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint8"
+    name="Right_gripper1"
     type="prismatic">
     <origin
       xyz="-0.031434667830233 -0.177982756632216 0.00367500000001846"
@@ -754,7 +754,7 @@
     </collision>
   </link>
   <joint
-    name="Right_arm_joint9"
+    name="Right_gripper2"
     type="prismatic">
     <origin
       xyz="0.0185328521185251 -0.179784686200892 0.00367500000001854"
@@ -812,7 +812,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint1"
+    name="Left_joint1"
     type="revolute">
     <origin
       xyz="0.14638985542209 0.288056431115988 0"
@@ -870,7 +870,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint2"
+    name="Left_joint2"
     type="revolute">
     <origin
       xyz="9.99999999994339E-05 0.0301000000000004 0.0649999999999997"
@@ -880,10 +880,10 @@
     <child
       link="Left_arm_link2" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="-1.57"
-      upper="0.13"
+      lower="-0.13"
+      upper="1.57"
       effort="5"
       velocity="10" />
   </joint>
@@ -928,7 +928,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint3"
+    name="Left_joint3"
     type="revolute">
     <origin
       xyz="0.00889252372646632 -0.0694320081404338 0.0301000000000011"
@@ -938,7 +938,7 @@
     <child
       link="Left_arm_link3" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
       lower="-0.78"
       upper="0.78"
@@ -986,7 +986,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint4"
+    name="Left_joint4"
     type="revolute">
     <origin
       xyz="0 -0.029675000000001 0.151050000000001"
@@ -1044,7 +1044,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint5"
+    name="Left_joint5"
     type="revolute">
     <origin
       xyz="0 0.098299999999999 -0.0284999999999962"
@@ -1102,7 +1102,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint6"
+    name="Left_joint6"
     type="revolute">
     <origin
       xyz="0.000500000000001166 0 -0.139500000000004"
@@ -1160,7 +1160,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint7"
+    name="Left_joint7"
     type="revolute">
     <origin
       xyz="0 0 0"
@@ -1170,7 +1170,7 @@
     <child
       link="Left_arm_link7" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
       lower="-0.78"
       upper="0.78"
@@ -1218,7 +1218,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint8"
+    name="Left_gripper1"
     type="prismatic">
     <origin
       xyz="0.025 0.179 0.00249999999999894"
@@ -1276,7 +1276,7 @@
     </collision>
   </link>
   <joint
-    name="Left_arm_joint9"
+    name="Left_gripper2"
     type="prismatic">
     <origin
       xyz="-0.0250000000000001 0.179 0.00249999999999898"
