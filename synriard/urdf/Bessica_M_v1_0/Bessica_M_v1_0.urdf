@@ -274,7 +274,7 @@
       xyz="-0.018 -0.003 -0.5"
       rpy="-3.14159265358979 0 0" />
     <parent
-      link="Torso_link1" />
+      link="Torso_link3" />
     <child
       link="head_link" />
     <axis
