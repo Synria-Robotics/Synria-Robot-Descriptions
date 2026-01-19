@@ -34,7 +34,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -74,7 +74,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -132,7 +132,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -190,7 +190,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -248,7 +248,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -306,7 +306,7 @@
       <material
         name="">
         <color
-          rgba="0.89804 0.91765 0.92941 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -364,7 +364,7 @@
       <material
         name="">
         <color
-          rgba="0.8902 0.8902 0.91373 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -422,7 +422,7 @@
       <material
         name="">
         <color
-          rgba="0.83137 0.83922 0.83137 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -475,7 +475,7 @@
       <material
         name="">
         <color
-          rgba="0.79608 0.82353 0.93725 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
@@ -533,7 +533,7 @@
       <material
         name="">
         <color
-          rgba="0.79608 0.82353 0.93725 1" />
+          rgba="0.25 0.25 0.25 1" />
       </material>
     </visual>
     <collision>
