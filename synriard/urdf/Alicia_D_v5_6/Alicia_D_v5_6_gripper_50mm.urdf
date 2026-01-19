@@ -7,13 +7,13 @@
  <mujoco>
     <compiler meshdir="../../meshes/Alicia_D_v5_6/follower_standard" discardvisual="false" />
     <contact>
-      <exclude body1="base_link" body2="Link1"/>
-      <exclude body1="Link1" body2="Link2"/>
-      <exclude body1="Link2" body2="Link3"/>
-      <exclude body1="Link3" body2="Link4"/>
-      <exclude body1="Link4" body2="Link5"/>
-      <exclude body1="Link5" body2="Link6"/>
-      <exclude body1="Link6" body2="left_gripper"/>
+      <exclude body1="base_link" body2="link1"/>
+      <exclude body1="link1" body2="link2"/>
+      <exclude body1="link2" body2="link3"/>
+      <exclude body1="link3" body2="link4"/>
+      <exclude body1="link4" body2="link5"/>
+      <exclude body1="link5" body2="link6"/>
+      <exclude body1="link6" body2="left_gripper"/>
       <exclude body1="left_gripper" body2="right_gripper"/>
     </contact>
   </mujoco>
@@ -60,7 +60,7 @@
     </collision>
   </link>
   <link
-    name="Link1">
+    name="link1">
     <inertial>
       <origin
         xyz="0.000230595970657381 1.29045409715261E-05 0.00303135669887118"
@@ -81,7 +81,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link1.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link1.STL" />
       </geometry>
       <material
         name="">
@@ -95,7 +95,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link1.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -108,7 +108,7 @@
     <parent
       link="base_link" />
     <child
-      link="Link1" />
+      link="link1" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -118,7 +118,7 @@
       velocity="12" />
   </joint>
   <link
-    name="Link2">
+    name="link2">
     <inertial>
       <origin
         xyz="-0.15058869562262 0.000866069014338703 -0.00065095059586996"
@@ -139,7 +139,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link2.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link2.STL" />
       </geometry>
       <material
         name="">
@@ -153,7 +153,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link2.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -164,9 +164,9 @@
       xyz="0 0 0.04287"
       rpy="1.5708 1.5708 0" />
     <parent
-      link="Link1" />
+      link="link1" />
     <child
-      link="Link2" />
+      link="link2" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -176,7 +176,7 @@
       velocity="12" />
   </joint>
   <link
-    name="Link3">
+    name="link3">
     <inertial>
       <origin
         xyz="0.00248143782929389 -0.055786319810667 0.000269720725051862"
@@ -197,7 +197,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link3.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link3.STL" />
       </geometry>
       <material
         name="">
@@ -211,7 +211,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link3.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -222,9 +222,9 @@
       xyz="-0.22367 0.022492 -5E-05"
       rpy="0 0 2.3562" />
     <parent
-      link="Link2" />
+      link="link2" />
     <child
-      link="Link3" />
+      link="link3" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -234,7 +234,7 @@
       velocity="12" />
   </joint>
   <link
-    name="Link4">
+    name="link4">
     <inertial>
       <origin
         xyz="0.000298365499180664 -0.000601368964523881 0.0659740390649536"
@@ -255,7 +255,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link4.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link4.STL" />
       </geometry>
       <material
         name="">
@@ -269,7 +269,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link4.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -280,9 +280,9 @@
       xyz="-0.00211 -0.099 0.0002"
       rpy="-1.5708 0 -3.1416" />
     <parent
-      link="Link3" />
+      link="link3" />
     <child
-      link="Link4" />
+      link="link4" />
     <axis
       xyz="0 0 -1" />
     <limit
@@ -292,7 +292,7 @@
       velocity="12" />
   </joint>
   <link
-    name="Link5">
+    name="link5">
     <inertial>
       <origin
         xyz="-0.0113684233807493 -0.0308687469815376 0.000870449932961739"
@@ -313,7 +313,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link5.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link5.STL" />
       </geometry>
       <material
         name="">
@@ -327,7 +327,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link5.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -338,9 +338,9 @@
       xyz="0 -0.0005 0.12235"
       rpy="-1.5708 0 0" />
     <parent
-      link="Link4" />
+      link="link4" />
     <child
-      link="Link5" />
+      link="link5" />
     <axis
       xyz="0 0 -1" />
     <limit
@@ -350,7 +350,7 @@
       velocity="12" />
   </joint>
   <link
-    name="Link6">
+    name="link6">
     <inertial>
       <origin
         xyz="-0.0274897808293123 1.7881629110631E-05 -0.0342551063340634"
@@ -371,7 +371,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link6.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link6.STL" />
       </geometry>
       <material
         name="">
@@ -385,7 +385,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/Link6.STL" />
+          filename="../../meshes/Alicia_D_v5_6/follower_standard/link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -396,9 +396,9 @@
       xyz="-0.00385 -0.0575 0.001"
       rpy="-1.5708 0 0" />
     <parent
-      link="Link5" />
+      link="link5" />
     <child
-      link="Link6" />
+      link="link6" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -454,7 +454,7 @@
       xyz="0.000199999999998979 0.0254999999999971 -0.130979659620445"
       rpy="-1.5707963267949 0 -3.14159265358979" />
     <parent
-      link="Link6" />
+      link="link6" />
     <child
       link="left_gripper" />
     <axis
@@ -512,7 +512,7 @@
       xyz="0.0002 -0.0255 -0.13098"
       rpy="1.5708 0 0" />
     <parent
-      link="Link6" />
+      link="link6" />
     <child
       link="right_gripper" />
     <axis
@@ -547,7 +547,7 @@
       xyz="0.0002 0 -0.13098"
       rpy="0 0 0" />
     <parent
-      link="Link6" />
+      link="link6" />
     <child
       link="tool0" />
     <axis
