@@ -7,6 +7,9 @@ _MODULE_PATH = os.path.dirname(os.path.abspath(__file__))
 Alicia_D_v5_6_leader = SimpleNamespace()
 Alicia_D_v5_6_leader.urdf = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_leader.urdf")
 
+Alicia_D_v5_6_leader_ur = SimpleNamespace()
+Alicia_D_v5_6_leader_ur.urdf = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_leader_ur.urdf")
+
 Alicia_D_v5_6_gripper_100mm = SimpleNamespace()
 Alicia_D_v5_6_gripper_100mm.urdf = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_gripper_100mm.urdf")
 
