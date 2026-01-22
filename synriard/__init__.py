@@ -116,6 +116,7 @@ def list_available_models(model_format="urdf", show_path=False):
     """List all available robot models in a table format.
 
     :param model_format: Model format to list, 'urdf' or 'mjcf', default is 'urdf'
+    :param list_about_name: List models about the name, e.g., 'Alicia_D', 'Alicia_M', 'Bessica_D', 'Bessica_M', default is None
     :param show_path: If True, include file path column in the table
     :return: Formatted string table showing name, version, variant, and optionally path
     """
@@ -180,11 +181,10 @@ def list_available_models(model_format="urdf", show_path=False):
                         # Extract variant name
                         # All models follow {name}_{version}_{variant} naming convention
                         if name == "Alicia_D":
-                            # Format: {name}_{version}_gripper_{variant}
-                            pattern = f"{name}_{version}_gripper_"
+                            # Format: {name}_{version}_{variant}
+                            pattern = f"{name}_{version}_"
                             if variant_attr.startswith(pattern):
                                 variant = variant_attr.replace(pattern, "")
-                                variant = f"gripper_{variant}"  # Keep gripper_ prefix for variant
                             else:
                                 variant = None
                         elif name == "Alicia_M":
