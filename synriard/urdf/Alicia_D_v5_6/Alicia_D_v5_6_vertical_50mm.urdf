@@ -540,10 +540,10 @@
   </link>
 
   <joint
-    name="finger"
+    name="tool0_fixed_joint"
     type="fixed">
     <origin
-      xyz="0.0002 0 0.13098"
+      xyz="0 0 0.13"
       rpy="0 0 0" />
     <parent
       link="link6" />

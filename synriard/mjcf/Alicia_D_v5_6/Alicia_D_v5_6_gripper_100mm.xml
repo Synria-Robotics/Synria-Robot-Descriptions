@@ -55,7 +55,6 @@
                   <joint name="Joint6" pos="0 0 0" axis="0 0 -1" range="-3.14159 3.14159" actuatorfrcrange="-5 5"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link6_100mm"/>
                   <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link6_100mm"/>
-                  <geom size="0.005" pos="-0.0002 0 0.13098" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
                   <body name="left_gripper" pos="-0.0002 -0.0504978 0.13098" quat="0 0 0.707107 0.707107">
                     <inertial pos="2.97088e-08 -0.0434088 -0.0106597" quat="0.402878 0.581113 -0.581114 0.402868" mass="0.0256461" diaginertia="8.50964e-06 6.4683e-06 4.66071e-06"/>
                     <joint name="left_finger" pos="0 0 0" axis="0 0 1" type="slide" range="0 0.05" actuatorfrcrange="-5 5"/>
@@ -67,6 +66,11 @@
                     <joint name="right_finger" pos="0 0 0" axis="0 0 -1" type="slide" range="-0.05 0" actuatorfrcrange="-5 5"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="right_gripper_100mm"/>
                     <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="right_gripper_100mm"/>
+                  </body>
+                  <body name="tool0" pos="0 0 0.13">
+                    <inertial pos="0 0 0" quat="1 0 0 0" mass="0.001" diaginertia="1e-08 1e-08 1e-08"/>
+                    <geom type="sphere" size="0.01" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
+                    <site name="tool0_site" pos="0 0 0" size="0.01" type="sphere"/>
                   </body>
                 </body>
               </body>

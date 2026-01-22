@@ -83,9 +83,11 @@
                     <geom pos="0.14128 -0.0505 0.00015" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.15 0.15 0.15 1" mesh="right_arm_gripper_left_finger"/>
                     <geom pos="0.14128 0.0505 0.00015" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="right_arm_gripper_right_finger"/>
                     <geom pos="0.14128 0.0505 0.00015" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.15 0.15 0.15 1" mesh="right_arm_gripper_right_finger"/>
-                    <geom size="0.005" pos="0.14128 0 0.00015" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
-                    <!-- Gripper center site (between fingers) -->
-                    <site name="ik_offset_right_gripper" pos="0.14128 0 0.00015" size="0.005" rgba="1 0 0 0.5" />
+                    <body name="right_tool0" pos="0.15 0 0">
+                      <inertial pos="0 0 0" quat="1 0 0 0" mass="0.001" diaginertia="1e-08 1e-08 1e-08"/>
+                      <geom type="sphere" size="0.01" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
+                      <site name="right_tool0_site" pos="0 0 0" size="0.01" type="sphere"/>
+                    </body>
                   </body>
                 </body>
               </body>
@@ -132,9 +134,11 @@
                     <geom pos="0.14058 -0.054652 0.00015" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.15 0.15 0.15 1" mesh="left_arm_gripper_left_finger"/>
                     <geom pos="0.14058 0.046348 0.00015" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="left_arm_gripper_right_finger"/>
                     <geom pos="0.14058 0.046348 0.00015" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.15 0.15 0.15 1" mesh="left_arm_gripper_right_finger"/>
-                    <geom size="0.005" pos="0.14058 -0.0041524 0.00015" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
-                    <!-- Gripper center site (between fingers) -->
-                    <site name="ik_offset_left_gripper" pos="0.14058 -0.0041524 0.00015" size="0.005" rgba="0 0 1 0.5" />
+                    <body name="left_tool0" pos="0.15 0 0">
+                      <inertial pos="0 0 0" quat="1 0 0 0" mass="0.001" diaginertia="1e-08 1e-08 1e-08"/>
+                      <geom type="sphere" size="0.01" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
+                      <site name="left_tool0_site" pos="0 0 0" size="0.01" type="sphere"/>
+                    </body>
                   </body>
                 </body>
               </body>

@@ -388,59 +388,6 @@
       velocity="5" />
   </joint>
   <link
-    name="grasp_base">
-    <inertial>
-      <origin
-        xyz="-0.0321082111389046 -0.000168822009778203 0.0275474621634362"
-        rpy="0 0 0" />
-      <mass
-        value="0.119820573147005" />
-      <inertia
-        ixx="8.23026483118452E-05"
-        ixy="2.1627287972411E-08"
-        ixz="-6.37078693697654E-06"
-        iyy="3.33372461482565E-05"
-        iyz="2.3095070932307E-08"
-        izz="8.59654133961544E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Alicia_D_v5_5/grasp_base.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Alicia_D_v5_5/grasp_base.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="Joint6_to_gripper_base"
-    type="fixed">
-    <origin
-      xyz="0 0 0"
-      rpy="0 0 0" />
-    <parent
-      link="link6" />
-    <child
-      link="grasp_base" />
-    <axis
-      xyz="0 0 0" />
-  </joint>
-  <link
     name="link7">
     <inertial>
       <origin
@@ -487,7 +434,7 @@
       xyz="-0.0002 0.050502 0.13118"
       rpy="-1.5708 0 0" />
     <parent
-      link="grasp_base" />
+      link="link6" />
     <child
       link="link7" />
     <axis
@@ -545,7 +492,7 @@
       xyz="-0.0002 -0.050498 0.13118"
       rpy="1.5708 0 0" />
     <parent
-      link="grasp_base" />
+      link="link6" />
     <child
       link="link8" />
     <axis
@@ -563,23 +510,23 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <sphere radius="0.005" /> <!-- Define a small sphere with radius 0.005m -->
+        <sphere radius="0.005" />
       </geometry>
       <material
-        name="green_virtual_sphere_material"> <!-- Material name for the virtual sphere -->
+        name="green_virtual_sphere_material">
         <color
-          rgba="0 1 0 1" /> <!-- Green color (R G B A), A=1 means opaque -->
+          rgba="0 1 0 1" />
       </material>
     </visual>
   </link>
   <joint
-    name="Grasp2tool"
+    name="tool0_fixed_joint"
     type="fixed">
     <origin
-      xyz="-0.0002 -0.0003 0.13118"
+      xyz="0 0 0.13"
       rpy="0 0 0" />
     <parent
-      link="grasp_base" />
+      link="link6" />
     <child
       link="tool0" />
     <axis

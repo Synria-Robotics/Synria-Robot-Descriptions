@@ -3,9 +3,9 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="bessica_d">
+  name="Bessica_D_v1_1_covered">
     <mujoco>
-        <compiler meshdir="../../meshes/Bessica_D_v1_0/withCover" balanceinertia="true" discardvisual="false" />
+        <compiler meshdir="../../meshes/Bessica_D_v1_1/SkeletonOnly" balanceinertia="true" discardvisual="false" />
         <contact>
             <exclude body1="base_link" body2="left_arm_base_link" />
             <exclude body1="left_arm_base_link" body2="left_arm_link1" />
@@ -29,21 +29,22 @@
             <exclude body1="right_arm_link7" body2="right_arm_gripper_right_finger" />
         </contact>
     </mujoco>
+
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-0.00686734373371353 -0.000830132301508779 0.890581345312217"
+        xyz="-0.0213994189150022 0.00222516132627618 0.313837183059334"
         rpy="0 0 0" />
       <mass
-        value="2.26415289791904" />
+        value="2.97915154863328" />
       <inertia
-        ixx="0.0565673679158182"
-        ixy="-2.41210319670709E-05"
-        ixz="-0.000382817871659701"
-        iyy="0.054770906068853"
-        iyz="-4.80169539965677E-05"
-        izz="0.017371857678062" />
+        ixx="0.0266780236458614"
+        ixy="-8.40632030328001E-06"
+        ixz="5.94524047927399E-05"
+        iyy="0.0251251736503752"
+        iyz="5.57261708333564E-05"
+        izz="0.0281701364982913" />
     </inertial>
     <visual>
       <origin
@@ -51,7 +52,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/base_link.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/base_link.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -65,25 +66,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/base_link.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/base_link.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
   <link
-    name="right_arm_base_link">
+    name="head_link">
     <inertial>
       <origin
-        xyz="-1.63473947356365E-05 0.0103241813477426 -0.00300662501800325"
+        xyz="-0.0293125008363115 -0.000187466229046737 -0.0543306015967774"
         rpy="0 0 0" />
       <mass
-        value="0.760760214237615" />
+        value="0.14240268640264" />
       <inertia
-        ixx="0.00140239578150425"
-        ixy="-1.42916140940146E-07"
-        ixz="-1.37239405098036E-07"
-        iyy="0.00186458776403398"
-        iyz="1.55314870843035E-05"
-        izz="0.00146104425715145" />
+        ixx="5.88444113087788E-05"
+        ixy="3.20781054100873E-08"
+        ixz="-2.3670754604199E-07"
+        iyy="8.42831926167512E-05"
+        iyz="-3.88467674926458E-08"
+        izz="0.000119983893551237" />
     </inertial>
     <visual>
       <origin
@@ -91,7 +92,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_base_link.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/head.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -105,7 +106,60 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_base_link.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/head.STL" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head"
+    type="fixed">
+    <origin
+      xyz="0.0608244989821353 0.00175926213288549 0.700041453535696"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="head_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_arm_base_link">
+    <inertial>
+      <origin
+        xyz="1.14204610799917E-05 -0.0313122795486606 0.00207120887297763"
+        rpy="0 0 0" />
+      <mass
+        value="0.708886467477366" />
+      <inertia
+        ixx="0.00109027347212421"
+        ixy="1.2427447571166E-07"
+        ixz="-3.30654305612188E-08"
+        iyy="0.00175522828646041"
+        iyz="1.13920582290032E-05"
+        izz="0.00103392336580602" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_base_link.STL" scale="1 1 1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_base_link.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -113,10 +167,10 @@
     name="right_arm_base_joint"
     type="fixed">
     <origin
-      xyz="0 0.0999999996666618 1.01500000066667"
-      rpy="0 0 0" />
+      xyz="-0.060825 -0.091759 -0.18554"
+      rpy="3.1416 0 -3.1416" />
     <parent
-      link="base_link" />
+      link="head_link" />
     <child
       link="right_arm_base_link" />
     <axis
@@ -126,17 +180,17 @@
     name="right_arm_link1">
     <inertial>
       <origin
-        xyz="-3.24321468574207E-05 -0.0169208473091281 -3.91830093831036E-05"
+        xyz="0.000110931733588726 -0.00312061750298909 0.000177905469213924"
         rpy="0 0 0" />
       <mass
-        value="0.3157339691478" />
+        value="0.208265932443548" />
       <inertia
-        ixx="0.000355333070561494"
-        ixy="-1.12251445571214E-06"
-        ixz="-8.96327030265676E-07"
-        iyy="0.000465495696286629"
-        iyz="4.11555770442059E-07"
-        izz="0.000358749747002376" />
+        ixx="0.000150652973467298"
+        ixy="1.03593056896932E-06"
+        ixz="-4.02294223782555E-07"
+        iyy="0.000340012950108409"
+        iyz="-3.27494058452419E-07"
+        izz="0.000262863346156477" />
     </inertial>
     <visual>
       <origin
@@ -144,12 +198,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link1.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link1.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
       </material>
     </visual>
     <collision>
@@ -158,7 +212,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link1.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link1.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -166,8 +220,8 @@
     name="right_arm_joint1"
     type="revolute">
     <origin
-      xyz="0 0.114500000000005 0"
-      rpy="3.14159265358979 0 0" />
+      xyz="-4.9995E-05 -0.1146 0"
+      rpy="0 0 0" />
     <parent
       link="right_arm_base_link" />
     <child
@@ -175,8 +229,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-2.749"
+      upper="2.749"
       effort="5"
       velocity="12" />
   </joint>
@@ -184,17 +238,17 @@
     name="right_arm_link2">
     <inertial>
       <origin
-        xyz="-0.0294208677882922 0.000476964264629454 -0.000518958897082481"
+        xyz="-0.0297080835856076 -0.000293736358338903 -0.000469868640934901"
         rpy="0 0 0" />
       <mass
-        value="0.0501482304791555" />
+        value="0.0472690682635543" />
       <inertia
-        ixx="7.68324123453959E-06"
-        ixy="-5.76060636775063E-07"
-        ixz="-1.43192461618645E-06"
-        iyy="1.62270247131465E-05"
-        iyz="1.34505028400584E-08"
-        izz="1.55418254850871E-05" />
+        ixx="7.84810740381452E-06"
+        ixy="3.0307330415702E-07"
+        ixz="8.12871168227469E-07"
+        iyy="1.6196738097515E-05"
+        iyz="-2.66374208497861E-08"
+        izz="1.57923110620936E-05" />
     </inertial>
     <visual>
       <origin
@@ -202,12 +256,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link2.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link2.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
       </material>
     </visual>
     <collision>
@@ -216,7 +270,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link2.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link2.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -224,17 +278,17 @@
     name="right_arm_joint2"
     type="revolute">
     <origin
-      xyz="0 -0.0428699999999995 0"
-      rpy="-3.14159264133724 1.57079625690226 0" />
+      xyz="0 -0.04286 0"
+      rpy="0 1.5708 0" />
     <parent
       link="right_arm_link1" />
     <child
       link="right_arm_link2" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-0.1"
+      upper="3.1416"
       effort="5"
       velocity="12" />
   </joint>
@@ -242,17 +296,17 @@
     name="right_arm_link3">
     <inertial>
       <origin
-        xyz="-0.00598311053812289 4.94633393373142E-05 0.107926403527906"
+        xyz="-0.00359312750625992 -0.000221911456218804 0.0944689553721528"
         rpy="0 0 0" />
       <mass
-        value="0.368447313337917" />
+        value="0.140451564761292" />
       <inertia
-        ixx="0.00067108569280531"
-        ixy="1.46838855377877E-08"
-        ixz="-3.24538603955447E-05"
-        iyy="0.00060342414221262"
-        iyz="-7.1361626089816E-08"
-        izz="0.000364264970999212" />
+        ixx="7.84851547500319E-05"
+        ixy="7.63137736391691E-08"
+        ixz="-2.13950347562665E-06"
+        iyy="8.80462027388166E-05"
+        iyz="-2.08857303185621E-07"
+        izz="5.54283682942892E-05" />
     </inertial>
     <visual>
       <origin
@@ -260,7 +314,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link3.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link3.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -274,7 +328,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link3.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link3.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -282,8 +336,8 @@
     name="right_arm_joint3"
     type="revolute">
     <origin
-      xyz="-0.0639500000000018 -0.000100000000001099 -0.000399999996885698"
-      rpy="1.57079632679464 0 -1.5707963267949" />
+      xyz="-0.06455 0 -0.0003"
+      rpy="3.1416 1.5708 0" />
     <parent
       link="right_arm_link2" />
     <child
@@ -291,8 +345,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-2.79"
+      upper="2.79"
       effort="5"
       velocity="12" />
   </joint>
@@ -300,17 +354,17 @@
     name="right_arm_link4">
     <inertial>
       <origin
-        xyz="-0.000541938873679149 -0.0284058068549827 -0.000370347235469402"
+        xyz="-2.80228986531128E-05 0.0241582522751294 4.84136443005823E-05"
         rpy="0 0 0" />
       <mass
-        value="0.048007139134458" />
+        value="0.0427207248079551" />
       <inertia
-        ixx="1.64141913809997E-05"
-        ixy="5.78456736280739E-07"
-        ixz="-9.62946715665583E-09"
-        iyy="7.5409381512228E-06"
-        iyz="-1.52193904300628E-06"
-        izz="1.5513339098241E-05" />
+        ixx="1.04868449032066E-05"
+        ixy="-6.7403811827915E-10"
+        ixz="-2.03399189642414E-12"
+        iyy="8.49767825719554E-06"
+        iyz="-1.47259005690473E-12"
+        izz="8.00564872610079E-06" />
     </inertial>
     <visual>
       <origin
@@ -318,12 +372,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link4.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link4.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
       </material>
     </visual>
     <collision>
@@ -332,7 +386,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link4.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link4.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -340,17 +394,17 @@
     name="right_arm_joint4"
     type="revolute">
     <origin
-      xyz="0.00384000000000018 0 0.20261"
-      rpy="-1.57079632679465 0 0" />
+      xyz="-1.8989E-05 -4.9997E-05 0.1816"
+      rpy="1.5708 1.5708 0" />
     <parent
       link="right_arm_link3" />
     <child
       link="right_arm_link4" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-0.5236"
+      upper="2.95"
       effort="5"
       velocity="12" />
   </joint>
@@ -358,17 +412,17 @@
     name="right_arm_link5">
     <inertial>
       <origin
-        xyz="-0.00628108914650888 0.00021285362579031 -0.0733506437231033"
+        xyz="-0.0018091088753594 -0.000196778378568463 0.0430792595976821"
         rpy="0 0 0" />
       <mass
-        value="0.207077281082729" />
+        value="0.110396949965053" />
       <inertia
-        ixx="0.000306349652131258"
-        ixy="-2.73142529971129E-08"
-        ixz="3.50645300826623E-05"
-        iyy="0.000340615582191323"
-        iyz="-3.40700219751777E-07"
-        izz="0.000142891896252893" />
+        ixx="8.5064631574955E-05"
+        ixy="4.15482672393953E-07"
+        ixz="-9.67661906182039E-06"
+        iyy="8.69928965307323E-05"
+        iyz="8.81477407046221E-07"
+        izz="4.58202380966561E-05" />
     </inertial>
     <visual>
       <origin
@@ -376,7 +430,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link5.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link5.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -390,7 +444,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link5.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link5.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -398,17 +452,17 @@
     name="right_arm_joint5"
     type="revolute">
     <origin
-      xyz="0 -0.0639500000000002 0.000199999999992483"
-      rpy="-1.57079632679515 0 0" />
+      xyz="0 0.0487999946213909 0.000100002721817094"
+      rpy="1.5707963267948 -1.5707963267949 3.14159265358979" />
     <parent
       link="right_arm_link4" />
     <child
       link="right_arm_link5" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-2.79"
+      upper="2.79"
       effort="5"
       velocity="12" />
   </joint>
@@ -416,17 +470,17 @@
     name="right_arm_link6">
     <inertial>
       <origin
-        xyz="-0.000759194613459746 -0.0240065529819558 -5.58164371063984E-05"
+        xyz="0.000365897578257224 -0.0257376403738949 -4.10017384462336E-05"
         rpy="0 0 0" />
       <mass
-        value="0.0325622574715594" />
+        value="0.0345706786766012" />
       <inertia
-        ixx="1.56755999138145E-05"
-        ixy="1.61833904253333E-07"
-        ixz="-7.68617040661809E-09"
-        iyy="1.27877692587484E-05"
-        iyz="-2.84599247552984E-08"
-        izz="9.25035078924867E-06" />
+        ixx="1.56357560389182E-05"
+        ixy="-1.63183630784717E-07"
+        ixz="-7.87695854254402E-09"
+        iyy="1.27277246485998E-05"
+        iyz="2.83300566726252E-08"
+        izz="9.20019800183926E-06" />
     </inertial>
     <visual>
       <origin
@@ -434,7 +488,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link6.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link6.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -448,7 +502,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link6.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link6.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -456,17 +510,17 @@
     name="right_arm_joint6"
     type="revolute">
     <origin
-      xyz="0.00378999999999963 5.00000000468472E-05 -0.1806"
-      rpy="1.57079632679515 0 0" />
+      xyz="0.00289 -0.0020761 0.10801"
+      rpy="-1.5708 0 0" />
     <parent
       link="right_arm_link5" />
     <child
       link="right_arm_link6" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-1.675"
+      upper="1.675"
       effort="5"
       velocity="12" />
   </joint>
@@ -474,17 +528,17 @@
     name="right_arm_link7">
     <inertial>
       <origin
-        xyz="0.0410271822605306 -0.000104797361222926 -0.0275632955071975"
+        xyz="0.0415075863157686 -0.000152826039986842 0.0262966808899044"
         rpy="0 0 0" />
       <mass
-        value="0.130617660751133" />
+        value="0.134443483448265" />
       <inertia
-        ixx="9.37555144818836E-05"
-        ixy="-2.67295143369452E-08"
-        ixz="-3.95378371535052E-06"
-        iyy="4.22371579950213E-05"
-        iyz="-1.83444197853209E-08"
-        izz="8.40584344645817E-05" />
+        ixx="9.47488732350365E-05"
+        ixy="1.46899642307621E-08"
+        ixz="3.66536057576179E-06"
+        iyy="4.31456176264887E-05"
+        iyz="-1.72469029366528E-08"
+        izz="8.45592400210402E-05" />
     </inertial>
     <visual>
       <origin
@@ -492,12 +546,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link7.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link7.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
       </material>
     </visual>
     <collision>
@@ -506,7 +560,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_link7.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_link7.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -514,8 +568,8 @@
     name="right_arm_joint7"
     type="revolute">
     <origin
-      xyz="0.000100000000024303 -0.0556000006666655 -9.99999999954217E-05"
-      rpy="-1.57079632679513 0 -1.5707963267949" />
+      xyz="-0.0015 -0.05561 0"
+      rpy="1.5708 0 -1.5708" />
     <parent
       link="right_arm_link6" />
     <child
@@ -523,8 +577,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-1.448"
+      upper="1.448"
       effort="5"
       velocity="12" />
   </joint>
@@ -532,17 +586,17 @@
     name="right_arm_gripper_left_finger">
     <inertial>
       <origin
-        xyz="-0.0434086638781261 -1.54809455255034E-08 -0.0106596340340038"
+        xyz="-0.0434086592316459 -1.82028284667624E-08 -0.0106596255383133"
         rpy="0 0 0" />
       <mass
-        value="0.0256462690507917" />
+        value="0.0256462690507918" />
       <inertia
-        ixx="5.13427082573144E-06"
-        ixy="2.44818388644314E-11"
-        ixz="-1.26430153754371E-06"
-        iyy="6.46826201248428E-06"
-        iyz="-4.17381205497342E-13"
-        izz="8.03606718172591E-06" />
+        ixx="5.13427082573154E-06"
+        ixy="2.44818388732062E-11"
+        ixz="-1.26430153754377E-06"
+        iyy="6.46826201248425E-06"
+        iyz="-4.17381220204411E-13"
+        izz="8.03606718172584E-06" />
     </inertial>
     <visual>
       <origin
@@ -550,7 +604,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_gripper_left_finger.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_gripper_left_finger.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -564,25 +618,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_gripper_left_finger.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_gripper_left_finger.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
   <joint
     name="right_arm_gripper_joint1"
-    type="fixed">
+    type="prismatic">
     <origin
-      xyz="0.141279659620446 -0.0505000000000126 -0.000150000000035122"
-      rpy="-1.57079632679466 0 0" />
+      xyz="0.14128 -0.0505 0.00015"
+      rpy="-1.5708 0 0" />
     <parent
       link="right_arm_link7" />
     <child
       link="right_arm_gripper_left_finger" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 -1" />
     <limit
-      lower="0"
-      upper="-0.05"
+      lower="-0.05"
+      upper="0"
       effort="5"
       velocity="12" />
   </joint>
@@ -590,17 +644,17 @@
     name="right_arm_gripper_right_finger">
     <inertial>
       <origin
-        xyz="-0.043408663878126 -1.54809454699922E-08 -0.0106596340340039"
+        xyz="-0.0434086592316461 -1.2759062806289E-08 -0.0106596425296954"
         rpy="0 0 0" />
       <mass
-        value="0.025646269050792" />
+        value="0.0256462690507921" />
       <inertia
-        ixx="5.1342708257315E-06"
-        ixy="2.44818388777405E-11"
-        ixz="-1.26430153754368E-06"
-        iyy="6.4682620124843E-06"
-        iyz="-4.17381216149094E-13"
-        izz="8.03606718172598E-06" />
+        ixx="5.13427082573152E-06"
+        ixy="2.44818388776517E-11"
+        ixz="-1.26430153754372E-06"
+        iyy="6.46826201248447E-06"
+        iyz="-4.17381217859319E-13"
+        izz="8.03606718172613E-06" />
     </inertial>
     <visual>
       <origin
@@ -608,7 +662,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_gripper_right_finger.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_gripper_right_finger.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -622,35 +676,31 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/right_arm_gripper_right_finger.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/right_arm_gripper_right_finger.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
   <joint
     name="right_arm_gripper_joint2"
-    type="fixed">
+    type="prismatic">
     <origin
-      xyz="0.141279659620446 0.050499999999987 -0.00015000000001425"
-      rpy="1.57079632679513 0 0" />
+      xyz="0.14128 0.0505 0.00015"
+      rpy="1.5708 0 0" />
     <parent
       link="right_arm_link7" />
     <child
       link="right_arm_gripper_right_finger" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 1" />
     <limit
-      lower="0.05"
-      upper="0"
+      lower="0"
+      upper="0.05"
       effort="5"
       velocity="12" />
   </joint>
- <link
-    name="left_gripper_center">
-    <!-- <inertial>
-      <origin
-        xyz="-0.567708783489947 0.00325239950363646 -0.250001266606243"
-        rpy="0 0 0" /> -->
-    <visual>
+  <link
+    name="right_tool0">
+     <visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -666,15 +716,15 @@
   </link>
 
   <joint
-    name="right_gripper_joint"
+    name="right_tool0_fixed_joint"
     type="fixed">
     <origin
-      xyz="0.14127965895378 0 -0.000150000000023076"
-      rpy="-3.14159265358956 0 0" />
+      xyz="0.15 0 0"
+      rpy="0 0 0" />
     <parent
       link="right_arm_link7" />
     <child
-      link="right_gripper_center" />
+      link="right_tool0" />
     <axis
       xyz="0 0 0" />
   </joint>
@@ -682,17 +732,17 @@
     name="left_arm_base_link">
     <inertial>
       <origin
-        xyz="1.6347368044371E-05 -0.00300662518201564 0.0103241813503003"
+        xyz="-1.1425444572527E-05 -0.00207120887324641 0.0313122794858798"
         rpy="0 0 0" />
       <mass
-        value="0.760760214288355" />
+        value="0.708886467098045" />
       <inertia
-        ixx="0.00140239578154612"
-        ixy="1.37239409841342E-07"
-        ixz="1.42916131747707E-07"
-        iyy="0.00146104425718537"
-        iyz="1.55314878250857E-05"
-        izz="0.00186458776404591" />
+        ixx="0.00109027347213969"
+        ixy="-3.30654324040014E-08"
+        ixz="1.24274247249233E-07"
+        iyy="0.00103392336541501"
+        iyz="1.1392058310753E-05"
+        izz="0.00175522828618526" />
     </inertial>
     <visual>
       <origin
@@ -700,12 +750,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_base_link.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_base_link.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
       </material>
     </visual>
     <collision>
@@ -714,7 +764,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_base_link.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_base_link.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -722,10 +772,10 @@
     name="left_arm_base_joint"
     type="fixed">
     <origin
-      xyz="0 -0.100000000333333 1.01500000133333"
-      rpy="1.5707963267949 0 0" />
+      xyz="-0.0608244908152262 0.0882407378671147 -0.185541452202364"
+      rpy="1.5707963267949 0 -3.14159265358979" />
     <parent
-      link="base_link" />
+      link="head_link" />
     <child
       link="left_arm_base_link" />
     <axis
@@ -735,17 +785,17 @@
     name="left_arm_link1">
     <inertial>
       <origin
-        xyz="3.24314962781516E-05 3.91850195176346E-05 0.0169208489159685"
+        xyz="-0.000114066048154726 0.000187361212312442 -0.0037036858224383"
         rpy="0 0 0" />
       <mass
-        value="0.315733947117255" />
+        value="0.197841071704829" />
       <inertia
-        ixx="0.000355333065420966"
-        ixy="-8.96328098207904E-07"
-        ixz="-1.12251532402765E-06"
-        iyy="0.000358749744495488"
-        iyz="4.11557020562811E-07"
-        izz="0.000465495689650493" />
+        ixx="0.000148040974322464"
+        ixy="4.02156422686863E-07"
+        ixz="-1.03598353298135E-06"
+        iyy="0.000260030643771461"
+        iyz="-3.27573524729728E-07"
+        izz="0.000335789891392015" />
     </inertial>
     <visual>
       <origin
@@ -753,12 +803,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link1.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link1.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
       </material>
     </visual>
     <collision>
@@ -767,7 +817,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link1.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link1.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -775,8 +825,8 @@
     name="left_arm_joint1"
     type="revolute">
     <origin
-      xyz="0 0 0.1145"
-      rpy="0 0 0" />
+      xyz="4.99975002436759E-05 0 0.1146"
+      rpy="3.14159265358979 0 0" />
     <parent
       link="left_arm_base_link" />
     <child
@@ -784,8 +834,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-2.749"
+      upper="2.749"
       effort="5"
       velocity="12" />
   </joint>
@@ -793,17 +843,17 @@
     name="left_arm_link2">
     <inertial>
       <origin
-        xyz="-0.0294208664452417 0.000476964259329749 -0.000518958903691429"
+        xyz="-0.0297080811587231 -0.00029373395179691 -0.000469873033539708"
         rpy="0 0 0" />
       <mass
-        value="0.0501482304995307" />
+        value="0.047269050971783" />
       <inertia
-        ixx="7.68324123570206E-06"
-        ixy="-5.7606063498267E-07"
-        ixz="-1.43192461955293E-06"
-        iyy="1.62270247045509E-05"
-        iyz="1.34505025118424E-08"
-        izz="1.55418254808189E-05" />
+        ixx="7.84810462964505E-06"
+        ixy="3.03073005983045E-07"
+        ixz="8.12874806591852E-07"
+        iyy="1.61967305681636E-05"
+        iyz="-2.66376107909205E-08"
+        izz="1.57923059360938E-05" />
     </inertial>
     <visual>
       <origin
@@ -811,12 +861,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link2.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link2.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
       </material>
     </visual>
     <collision>
@@ -825,7 +875,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link2.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link2.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -833,17 +883,17 @@
     name="left_arm_joint2"
     type="revolute">
     <origin
-      xyz="0 0 0.04287"
-      rpy="1.57079632679489 0 1.5707963267949" />
+      xyz="0 0 -0.04286"
+      rpy="1.5707963267949 0 -1.5707963267949" />
     <parent
       link="left_arm_link1" />
     <child
       link="left_arm_link2" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 0.999999999999908" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-0.1"
+      upper="3.14159"
       effort="5"
       velocity="12" />
   </joint>
@@ -851,17 +901,17 @@
     name="left_arm_link3">
     <inertial>
       <origin
-        xyz="-0.0060702147964071 -7.96525933281031E-05 0.105091704714287"
+        xyz="-0.00359313643753523 -0.00022191416785991 0.0944689657047718"
         rpy="0 0 0" />
       <mass
-        value="0.373333387538863" />
+        value="0.140451564579074" />
       <inertia
-        ixx="0.000671566223902426"
-        ixy="1.39420999698332E-08"
-        ixz="-3.24356386877245E-05"
-        iyy="0.000604631229031791"
-        iyz="-7.14074904026189E-08"
-        izz="0.0003658333287676" />
+        ixx="7.84851547058427E-05"
+        ixy="7.63137504480604E-08"
+        ixz="-2.13950343902015E-06"
+        iyy="8.80462026632492E-05"
+        iyz="-2.08857323389277E-07"
+        izz="5.54283682381524E-05" />
     </inertial>
     <visual>
       <origin
@@ -869,7 +919,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link3.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link3.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -883,7 +933,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link3.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link3.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -891,17 +941,17 @@
     name="left_arm_joint3"
     type="revolute">
     <origin
-      xyz="-0.0657500000000001 -9.99999999995171E-05 -0.000400000003120824"
-      rpy="1.5707963267949 0 -1.5707963267949" />
+      xyz="-0.0645499982324007 0 -0.000299995732645275"
+      rpy="0 -1.5707963267949 0" />
     <parent
       link="left_arm_link2" />
     <child
       link="left_arm_link3" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -0.999999999999908" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-2.79"
+      upper="2.79"
       effort="5"
       velocity="12" />
   </joint>
@@ -909,17 +959,17 @@
     name="left_arm_link4">
     <inertial>
       <origin
-        xyz="-0.000541938878732995 -0.0284058061970597 -0.000370347235388107"
+        xyz="2.80228986507813E-05 -0.0241582487399286 4.84136442951422E-05"
         rpy="0 0 0" />
       <mass
-        value="0.0480071391158089" />
+        value="0.0427207248079551" />
       <inertia
-        ixx="1.64141913891154E-05"
-        ixy="5.78456737691363E-07"
-        ixz="-9.62946752549522E-09"
-        iyy="7.54093815008549E-06"
-        iyz="-1.52193904000394E-06"
-        izz="1.55133391025037E-05" />
+        ixx="1.04868449032066E-05"
+        ixy="-6.74038118152915E-10"
+        ixz="2.03399188478554E-12"
+        iyy="8.4976782571955E-06"
+        iyz="1.47259007043504E-12"
+        izz="8.0056487261008E-06" />
     </inertial>
     <visual>
       <origin
@@ -927,12 +977,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link4.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link4.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
       </material>
     </visual>
     <collision>
@@ -941,7 +991,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link4.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link4.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -949,8 +999,8 @@
     name="left_arm_joint4"
     type="revolute">
     <origin
-      xyz="0.00383999999999432 0 0.20080999933334"
-      rpy="-1.5707963267949 0 0" />
+      xyz="-1.89941608896571E-05 -4.99999999989398E-05 0.1816"
+      rpy="1.57079632191723 -1.57079611188729 0" />
     <parent
       link="left_arm_link3" />
     <child
@@ -958,8 +1008,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-0.5236"
+      upper="2.95"
       effort="5"
       velocity="12" />
   </joint>
@@ -967,17 +1017,17 @@
     name="left_arm_link5">
     <inertial>
       <origin
-        xyz="-0.00625732698958872 0.000212853305092465 -0.0763030662658679"
+        xyz="-0.00180910609865517 -0.000196784930609262 0.0430792510138713"
         rpy="0 0 0" />
       <mass
-        value="0.207077276180107" />
+        value="0.110396951419793" />
       <inertia
-        ixx="0.000306349645859208"
-        ixy="-2.73143795587977E-08"
-        ixz="3.50645299236523E-05"
-        iyy="0.000340615577044975"
-        iyz="-3.40698306916482E-07"
-        izz="0.000142891895196546" />
+        ixx="8.50646330315701E-05"
+        ixy="4.15482574231161E-07"
+        ixz="-9.67661925090857E-06"
+        iyy="8.69928977214169E-05"
+        iyz="8.81476826739089E-07"
+        izz="4.58202384094719E-05" />
     </inertial>
     <visual>
       <origin
@@ -985,7 +1035,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link5.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link5.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -999,7 +1049,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link5.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link5.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -1007,8 +1057,8 @@
     name="left_arm_joint5"
     type="revolute">
     <origin
-      xyz="0 -0.0657500006666611 0.000199999999990721"
-      rpy="-1.5707963267949 0 0" />
+      xyz="0 -0.0488000000000013 9.99999999971857E-05"
+      rpy="1.5707963267949 1.5707963267949 0" />
     <parent
       link="left_arm_link4" />
     <child
@@ -1016,8 +1066,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-2.79"
+      upper="2.79"
       effort="5"
       velocity="12" />
   </joint>
@@ -1025,17 +1075,17 @@
     name="left_arm_link6">
     <inertial>
       <origin
-        xyz="-0.00075919461347998 -0.024006552315284 -5.58164371072249E-05"
+        xyz="0.000365897578245789 -0.0257376411060571 -4.10017384396277E-05"
         rpy="0 0 0" />
       <mass
-        value="0.0325622574715583" />
+        value="0.0345706786766011" />
       <inertia
-        ixx="1.56755999138142E-05"
-        ixy="1.61833904253336E-07"
-        ixz="-7.68617040663822E-09"
-        iyy="1.27877692587482E-05"
-        iyz="-2.84599247551008E-08"
-        izz="9.25035078924841E-06" />
+        ixx="1.56357560389182E-05"
+        ixy="-1.63183630784698E-07"
+        ixz="-7.87695854254256E-09"
+        iyy="1.27277246485998E-05"
+        iyz="2.83300566726637E-08"
+        izz="9.20019800183918E-06" />
     </inertial>
     <visual>
       <origin
@@ -1043,7 +1093,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link6.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link6.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -1057,7 +1107,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link6.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link6.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -1065,8 +1115,8 @@
     name="left_arm_joint6"
     type="revolute">
     <origin
-      xyz="0.00379000000002061 5.00000000002069E-05 -0.17879999933334"
-      rpy="1.5707963267949 0 0" />
+      xyz="0.00289000000000006 -0.00207606624709478 0.108009995732641"
+      rpy="-1.5707963267949 0 0" />
     <parent
       link="left_arm_link5" />
     <child
@@ -1074,8 +1124,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
+      lower="-1.675"
+      upper="1.675"
       effort="5"
       velocity="12" />
   </joint>
@@ -1083,17 +1133,17 @@
     name="left_arm_link7">
     <inertial>
       <origin
-        xyz="0.0408026542444621 -0.000102206604270802 -0.0271637511314085"
+        xyz="0.0410511427488477 -0.00430969105775492 0.0266716202400142"
         rpy="0 0 0" />
       <mass
-        value="0.134233364312826" />
+        value="0.130827779886618" />
       <inertia
-        ixx="9.48394067897535E-05"
-        ixy="-2.66849771333094E-08"
-        ixz="-3.97199050560631E-06"
-        iyy="4.30798330610582E-05"
-        iyz="-1.89333961977832E-08"
-        izz="8.43835119906452E-05" />
+        ixx="9.36649809271695E-05"
+        ixy="1.47345014368025E-08"
+        ixz="3.64715378550686E-06"
+        iyy="4.23029425604473E-05"
+        iyz="-1.66579265283484E-08"
+        izz="8.42341624949847E-05" />
     </inertial>
     <visual>
       <origin
@@ -1101,12 +1151,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link7.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link7.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
       </material>
     </visual>
     <collision>
@@ -1115,7 +1165,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_link7.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_link7.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -1123,8 +1173,8 @@
     name="left_arm_joint7"
     type="revolute">
     <origin
-      xyz="9.99999999615753E-05 -0.0556000006666605 -9.99999999948057E-05"
-      rpy="-1.57079632679513 0 -1.5707963267949" />
+      xyz="-0.00149999999999997 -0.0563100878103864 0.00415239451449378"
+      rpy="1.5707963267949 0 -1.5707963267949" />
     <parent
       link="left_arm_link6" />
     <child
@@ -1132,66 +1182,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-2.14"
-      upper="2.14"
-      effort="5"
-      velocity="12" />
-  </joint>
-  <link
-    name="left_arm_gripper_left_finger">
-    <inertial>
-      <origin
-        xyz="-0.0434086646602379 -1.54642348093592E-08 -0.0106596340402454"
-        rpy="0 0 0" />
-      <mass
-        value="0.0256462689646809" />
-      <inertia
-        ixx="5.13427082329405E-06"
-        ixy="2.4466938335663E-11"
-        ixz="-1.26430153296146E-06"
-        iyy="6.46826191340513E-06"
-        iyz="-4.18082754482212E-13"
-        izz="8.03606708048574E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_gripper_left_finger.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_gripper_left_finger.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="left_arm_gripper_joint1"
-    type="fixed">
-    <origin
-      xyz="0.141279659620444 -0.0505000000000146 -0.000149999999993239"
-      rpy="-1.57079632679466 0 0" />
-    <parent
-      link="left_arm_link7" />
-    <child
-      link="left_arm_gripper_left_finger" />
-    <axis
-      xyz="0 0 0" />
-    <limit
-      lower="0.05"
-      upper="0"
+      lower="-1.448"
+      upper="1.448"
       effort="5"
       velocity="12" />
   </joint>
@@ -1199,17 +1191,17 @@
     name="left_arm_gripper_right_finger">
     <inertial>
       <origin
-        xyz="-0.0434086645988102 -1.54744198288537E-08 -0.0106596340364537"
+        xyz="-0.0434086681995018 1.54744227154335E-08 0.111659632268856"
         rpy="0 0 0" />
       <mass
-        value="0.0256462690106051" />
+        value="0.025646269010605" />
       <inertia
-        ixx="5.13427082501838E-06"
-        ixy="2.44760154920438E-11"
-        ixz="-1.26430153583774E-06"
-        iyy="6.4682619660796E-06"
-        iyz="-4.17571995548422E-13"
-        izz="8.03606713459143E-06" />
+        ixx="5.13427082501842E-06"
+        ixy="-2.44760154990855E-11"
+        ixz="1.26430153583781E-06"
+        iyy="6.46826196607962E-06"
+        iyz="-4.17572002893429E-13"
+        izz="8.03606713459141E-06" />
     </inertial>
     <visual>
       <origin
@@ -1217,7 +1209,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_gripper_right_finger.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_gripper_right_finger.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -1231,30 +1223,89 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/left_arm_gripper_right_finger.STL" />
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_gripper_right_finger.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="left_arm_gripper_joint2"
-    type="fixed">
+    name="left_arm_gripper_joint1"
+    type="prismatic">
     <origin
-      xyz="0.141279659620445 0.0504999999999851 -0.000149999999972228"
-      rpy="1.57079632679513 0 0" />
+      xyz="0.14058 0.046348 0.00015"
+      rpy="1.5708 0 0" />
     <parent
       link="left_arm_link7" />
     <child
       link="left_arm_gripper_right_finger" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 1" />
+    <limit
+      lower="-0.05"
+      upper="0"
+      effort="5"
+      velocity="12" />
   </joint>
   <link
-    name="right_gripper_center">
-    <!-- <inertial>
+    name="left_arm_gripper_left_finger">
+    <inertial>
       <origin
-        xyz="-0.567708783489944 -0.00255239950365633 -0.249378733393753"
-        rpy="0 0 0" /> -->
+        xyz="-0.0434086681995048 1.54744233815673E-08 0.11165963580405"
+        rpy="0 0 0" />
+      <mass
+        value="0.025646269010605" />
+      <inertia
+        ixx="5.13427082501839E-06"
+        ixy="-2.44760154689045E-11"
+        ixz="1.26430153583774E-06"
+        iyy="6.46826196607951E-06"
+        iyz="-4.1757199942874E-13"
+        izz="8.03606713459134E-06" />
+    </inertial>
     <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_gripper_left_finger.STL" scale="1 1 1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Bessica_D_v1_1/SkeletonOnly/left_arm_gripper_left_finger.STL" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_gripper_joint2"
+    type="prismatic">
+    <origin
+      xyz="0.14058 -0.054652 0.00015"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="left_arm_link7" />
+    <child
+      link="left_arm_gripper_left_finger" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.05"
+      effort="5"
+      velocity="12" />
+  </joint>
+  <link
+    name="left_tool0">
+      <visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -1268,70 +1319,16 @@
       </material>
     </visual>
   </link>
-
   <joint
-    name="left_gripper_joint"
+    name="left_tool0_fixed_joint"
     type="fixed">
     <origin
-      xyz="0.14128 0 -0.00015"
-      rpy="-3.1416 0 0" />
+      xyz="0.15 0 0"
+      rpy="0 0 0" />
     <parent
       link="left_arm_link7" />
     <child
-      link="left_gripper_center" />
-    <axis
-      xyz="0 0 0" />
-  </joint>
-  <link
-    name="head">
-    <inertial>
-      <origin
-        xyz="-0.00247749465632648 -0.000216488006302029 -0.000252183296815235"
-        rpy="0 0 0" />
-      <mass
-        value="0.048731326683931" />
-      <inertia
-        ixx="5.98156721802178E-05"
-        ixy="2.48836385219022E-07"
-        ixz="1.0824303836918E-07"
-        iyy="5.83469219661141E-06"
-        iyz="-1.06689291159939E-07"
-        izz="5.93294337141664E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/head.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Bessica_D_v1_0/withCover/head.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="head"
-    type="fixed">
-    <origin
-      xyz="-0.058269 -0.0021593 1.1945"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="head" />
+      link="left_tool0" />
     <axis
       xyz="0 0 0" />
   </joint>

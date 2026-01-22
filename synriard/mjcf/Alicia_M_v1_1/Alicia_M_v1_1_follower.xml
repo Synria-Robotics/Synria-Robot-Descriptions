@@ -1,5 +1,5 @@
-<mujoco model="alicia_m_v1_1_gripper_100mm">
-  <compiler angle="radian" meshdir="../../meshes/Alicia_M_v1_1/"/>
+<mujoco model="alicia_m_v1_1_follower">
+  <compiler angle="radian" meshdir="../../meshes/Alicia_M_v1_1/follower"/>
 
   <asset>
     <mesh name="base_link" content_type="model/stl" file="base_link.STL"/>
@@ -58,7 +58,6 @@
                   <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link6"/>
                   <geom pos="-3.3333e-05 0 0.055" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="grasp_base"/>
                   <geom pos="-3.3333e-05 0 0.055" quat="1 0 0 0" type="mesh" rgba="0.15 0.15 0.15 1" mesh="grasp_base"/>
-                  <geom size="0.005" pos="0 -0.000675 0.15" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
                   <body name="link7" pos="0 -0.048175 0.151" quat="0.707105 0.707108 0.000122761 -0.000122761">
                     <inertial pos="-0.0062638 -0.056089 0.0037593" quat="0.913436 0.393188 -0.0116965 -0.104411" mass="0.048674" diaginertia="2.54969e-05 2.21204e-05 1.66597e-05"/>
                     <joint name="left_finger" pos="0 0 0" axis="0 0 1" type="slide" range="-0.05 0" actuatorfrcrange="-5 5"/>
@@ -70,6 +69,11 @@
                     <joint name="right_finger" pos="0 0 0" axis="0 0 1" type="slide" range="0 0.05" actuatorfrcrange="-5 5"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link8"/>
                     <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link8"/>
+                  </body>
+                  <body name="tool0" pos="0 0 0.15">
+                    <inertial pos="0 0 0" quat="1 0 0 0" mass="0.001" diaginertia="1e-08 1e-08 1e-08"/>
+                    <geom type="sphere" size="0.01" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
+                    <site name="tool0_site" pos="0 0 0" size="0.01" type="sphere"/>
                   </body>
                 </body>
               </body>
