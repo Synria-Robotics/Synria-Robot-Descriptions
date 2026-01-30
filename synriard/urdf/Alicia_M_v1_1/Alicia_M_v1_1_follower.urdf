@@ -510,7 +510,7 @@
       upper="0.05"
       effort="5"
       velocity="10" />
-    <mimic joint="grasp_joint_right" multiplier="-1.0" offset="0" />
+    <mimic joint="left_finger" multiplier="-1.0" offset="0" />
   </joint>
   <link
     name="tool0">
