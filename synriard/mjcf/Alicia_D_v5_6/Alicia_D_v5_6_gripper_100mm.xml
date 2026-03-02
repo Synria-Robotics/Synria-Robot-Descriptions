@@ -27,43 +27,43 @@
       <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="base_link"/>
       <body name="link1" pos="0 0 0.1295">
         <inertial pos="0.00023059 1.29106e-05 0.00303135" quat="0.501534 0.502707 -0.494443 0.501274" mass="0.195233" diaginertia="0.000339803 0.000258352 0.000149295"/>
-        <joint name="Joint1" pos="0 0 0" axis="0 0 1" range="-2.749 2.749" actuatorfrcrange="-5 5"/>
+        <joint name="Joint1" pos="0 0 0" axis="0 0 1" range="-2.749 2.749" actuatorfrcrange="-87 87"/>
         <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link1"/>
         <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link1"/>
         <body name="link2" pos="0 0 0.04287" quat="0.499998 0.5 0.5 -0.500002">
           <inertial pos="-0.150589 0.000866069 -0.000650951" quat="0.680967 0.18776 0.185184 0.683182" mass="0.207034" diaginertia="0.00020571 0.000131041 0.000119814"/>
-          <joint name="Joint2" pos="0 0 0" axis="0 0 1" range="-2 2" actuatorfrcrange="-5 5"/>
+          <joint name="Joint2" pos="0 0 0" axis="0 0 1" range="-2 2" actuatorfrcrange="-87 87"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link2"/>
           <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link2"/>
           <body name="link3" pos="-0.22367 0.022492 -5e-05" quat="0.382681 0 0 0.923881">
             <inertial pos="0.00248144 -0.0557863 0.000269721" quat="0.505129 0.478686 -0.468559 0.544203" mass="0.0845576" diaginertia="8.09971e-05 7.62965e-05 2.81294e-05"/>
-            <joint name="Joint3" pos="0 0 0" axis="0 0 1" range="-0.5 3.14159" actuatorfrcrange="-5 5"/>
+            <joint name="Joint3" pos="0 0 0" axis="0 0 1" range="-0.5 3.14159" actuatorfrcrange="-87 87"/>
             <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link3"/>
             <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link3"/>
             <body name="link4" pos="-0.00211 -0.099 0.0002" quat="0.707105 -0.707108 0 0">
               <inertial pos="-0.000298366 -0.000601369 -0.065974" quat="0.99997 -0.000404214 0.00701296 0.00329826" mass="0.0653696" diaginertia="7.0311e-05 6.8747e-05 1.68121e-05"/>
-              <joint name="Joint4" pos="0 0 0" axis="0 0 1" range="-2.79 2.79" actuatorfrcrange="-5 5"/>
+              <joint name="Joint4" pos="0 0 0" axis="0 0 1" range="-2.79 2.79" actuatorfrcrange="-87 87"/>
               <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link4_100mm"/>
               <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link4_100mm"/>
               <body name="link5" pos="0 -0.0005 -0.12235" quat="-2.59734e-06 -2.59735e-06 -0.707108 -0.707105">
                 <inertial pos="-0.0113684 -0.0308687 0.00087045" quat="0.600148 -0.0147585 -0.0142327 0.799626" mass="0.0507639" diaginertia="2.56871e-05 1.81869e-05 1.72553e-05"/>
-                <joint name="Joint5" pos="0 0 0" axis="0 0 -1" range="-1.57 1.57" actuatorfrcrange="-5 5"/>
+                <joint name="Joint5" pos="0 0 0" axis="0 0 -1" range="-1.57 1.57" actuatorfrcrange="-87 87"/>
                 <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link5"/>
                 <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link5"/>
                 <body name="link6" pos="-0.00385 -0.0575 0.001" quat="0.707105 0.707108 0 0">
                   <inertial pos="-0.0292481 -0.000168822 0.0345028" quat="0.374083 0.374075 -0.599887 0.60022" mass="0.119821" diaginertia="8.86659e-05 7.96022e-05 3.33372e-05"/>
-                  <joint name="Joint6" pos="0 0 0" axis="0 0 -1" range="-3.14159 3.14159" actuatorfrcrange="-5 5"/>
+                  <joint name="Joint6" pos="0 0 0" axis="0 0 -1" range="-3.14159 3.14159" actuatorfrcrange="-87 87"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link6_100mm"/>
                   <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link6_100mm"/>
                   <body name="left_gripper" pos="-0.0002 -0.0504978 0.13098" quat="0 0 0.707107 0.707107">
                     <inertial pos="2.97088e-08 -0.0434088 -0.0106597" quat="0.402878 0.581113 -0.581114 0.402868" mass="0.0256461" diaginertia="8.50964e-06 6.4683e-06 4.66071e-06"/>
-                    <joint name="left_finger" pos="0 0 0" axis="0 0 1" type="slide" range="0 0.05" actuatorfrcrange="-5 5"/>
+                    <joint name="left_finger" pos="0 0 0" axis="0 0 1" type="slide" range="0 0.05" actuatorfrcrange="-87 87"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="left_gripper_100mm"/>
                     <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="left_gripper_100mm"/>
                   </body>
                   <body name="right_gripper" pos="-0.0002 0.0505022 0.13098" quat="0 0 -0.707107 0.707107">
                     <inertial pos="-2.97088e-08 0.0434088 -0.0106597" quat="0.581114 0.402868 -0.402878 0.581113" mass="0.0256461" diaginertia="8.50964e-06 6.4683e-06 4.66071e-06"/>
-                    <joint name="right_finger" pos="0 0 0" axis="0 0 -1" type="slide" range="-0.05 0" actuatorfrcrange="-5 5"/>
+                    <joint name="right_finger" pos="0 0 0" axis="0 0 -1" type="slide" range="-0.05 0" actuatorfrcrange="-87 87"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="right_gripper_100mm"/>
                     <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="right_gripper_100mm"/>
                   </body>
@@ -90,4 +90,21 @@
     <exclude body1="link6" body2="left_gripper" />
     <exclude body1="left_gripper" body2="right_gripper" />
   </contact>
+  <actuator>
+    <!-- 6 arm joints: direct torque control for impedance teleoperation -->
+    <general name="actuator1" joint="Joint1" dyntype="none" biastype="none" forcerange="-87 87"/>
+    <general name="actuator2" joint="Joint2" dyntype="none" biastype="none" forcerange="-87 87"/>
+    <general name="actuator3" joint="Joint3" dyntype="none" biastype="none" forcerange="-87 87"/>
+    <general name="actuator4" joint="Joint4" dyntype="none" biastype="none" forcerange="-87 87"/>
+    <general name="actuator5" joint="Joint5" dyntype="none" biastype="none" forcerange="-87 87"/>
+    <general name="actuator6" joint="Joint6" dyntype="none" biastype="none" forcerange="-87 87"/>
+
+    <!-- 2 finger slide joints: PD position control (ctrl = target position) -->
+    <!-- force = gainprm[0]*ctrl + biasprm[0] + biasprm[1]*qpos + biasprm[2]*qvel -->
+    <!-- = 100*(ctrl - qpos) - 10*qvel  (PD tracking with kp=100, kv=10) -->
+    <general name="actuator7" joint="left_finger" biastype="affine"
+             ctrlrange="0 0.05" gainprm="100 0 0" biasprm="0 -100 -10" forcerange="-10 10"/>
+    <general name="actuator8" joint="right_finger" biastype="affine"
+             ctrlrange="-0.05 0" gainprm="100 0 0" biasprm="0 -100 -10" forcerange="-10 10"/>
+  </actuator>
 </mujoco>
