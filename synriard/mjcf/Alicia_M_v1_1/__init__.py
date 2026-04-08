@@ -11,3 +11,8 @@ Alicia_M_v1_1_follower.xml = os.path.join(_MODULE_PATH, "Alicia_M_v1_1_follower.
 
 Alicia_M_v1_1_bimanual_interactive = SimpleNamespace()
 Alicia_M_v1_1_bimanual_interactive.xml = os.path.join(_MODULE_PATH, "Alicia_M_v1_1_bimanual_interactive.xml")
+
+
+
+Alicia_M_v1_1_bi_interactive = SimpleNamespace()
+Alicia_M_v1_1_bi_interactive.xml = os.path.join(_MODULE_PATH, "Alicia_M_v1_1_bi_interactive.xml")
