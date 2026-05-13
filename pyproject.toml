@@ -29,11 +29,21 @@ Homepage = "https://github.com/Synria-Robotics/Synria-robot-descriptions"
 [tool.setuptools]
 # This automatically finds the 'synriard' folder
 packages = ["synriard"] 
+include-package-data = false
 
 [tool.setuptools.package-data]
-# This ensures non-python files are included
+# Keep the published package below PyPI's default 100 MB per-file limit.
+# Alicia_M_v1_0, Bessica_D_v1_0, Bessica_D_v1_1, and Bessica_M_v1_0 remain in the repo,
+# but are intentionally not included in release artifacts.
 synriard = [
-    "urdf/**/*",
-    "meshes/**/*",
-    "mjcf/**/*",
+    "urdf/__init__.py",
+    "urdf/Alicia_D_v5_5/**/*",
+    "urdf/Alicia_D_v5_6/**/*",
+    "urdf/Alicia_M_v1_1/**/*",
+    "meshes/Alicia_D_v5_5/**/*",
+    "meshes/Alicia_D_v5_6/**/*",
+    "meshes/Alicia_M_v1_1/**/*",
+    "mjcf/__init__.py",
+    "mjcf/Alicia_D_v5_6/**/*",
+    "mjcf/Alicia_M_v1_1/**/*",
 ]
