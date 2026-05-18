@@ -18,10 +18,3 @@ Alicia_D_v5_6_leader_ur.xml = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_leader_u
 
 Alicia_D_v5_6_vertical_50mm = SimpleNamespace()
 Alicia_D_v5_6_vertical_50mm.xml = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_vertical_50mm.xml")
-
-
-Alicia_D_v5_6_bimanual = SimpleNamespace()
-Alicia_D_v5_6_bimanual.xml = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_bimanual.xml")
-
-Alicia_D_v5_6_bimanual_interactive = SimpleNamespace()
-Alicia_D_v5_6_bimanual_interactive.xml = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_bimanual_interactive.xml")
