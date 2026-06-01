@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mujoco model="alicia_m_v1_1_follower">
+<mujoco model="alicia_m_v1_1_follower_interactive">
   <compiler angle="radian" meshdir="../../meshes/Alicia_M_v1_1/follower/" />
   <asset>
     <mesh name="base_link" file="base_link.STL" content_type="model/stl" />
@@ -70,7 +70,7 @@
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link8" />
                     <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link8" />
                   </body>
-                  <body name="tool0" pos="0 0 0.13">
+                  <body name="tool0" pos="0 0 0.15">
                     <inertial pos="0 0 0" quat="1 0 0 0" mass="0.001" diaginertia="1e-08 1e-08 1e-08" />
                     <geom type="sphere" size="0.01" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" />
                     <site name="tool0_site" pos="0 0 0" size="0.01" type="sphere" />
@@ -81,6 +81,16 @@
           </body>
         </body>
       </body>
+    </body>
+
+    <body name="ik_target_gripper" mocap="true" pos="0.32 0.0 0.35">
+      <geom type="cylinder" size="0.003 0.05" rgba="1 0 0 0.8" contype="0" conaffinity="0" fromto="0 0 0 0.1 0 0" />
+      <geom type="sphere" size="0.008" rgba="1 0 0 0.9" contype="0" conaffinity="0" pos="0.1 0 0" />
+      <geom type="cylinder" size="0.003 0.05" rgba="0 1 0 0.8" contype="0" conaffinity="0" fromto="0 0 0 0 0.1 0" />
+      <geom type="sphere" size="0.008" rgba="0 1 0 0.9" contype="0" conaffinity="0" pos="0 0.1 0" />
+      <geom type="cylinder" size="0.003 0.05" rgba="0 0 1 0.8" contype="0" conaffinity="0" fromto="0 0 0 0 0 0.1" />
+      <geom type="sphere" size="0.008" rgba="0 0 1 0.9" contype="0" conaffinity="0" pos="0 0 0.1" />
+      <geom type="sphere" size="0.015" rgba="1 0.5 0.5 0.6" contype="0" conaffinity="0" pos="0 0 0" />
     </body>
   </worldbody>
   <contact>
