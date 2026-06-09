@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "synriard"
-version = "1.2.3"
+version = "1.2.4"
 description = "URDF and MJCF robot description files for Synria robotic platforms."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -27,13 +27,36 @@ dependencies = [
 Homepage = "https://github.com/Synria-Robotics/Synria-robot-descriptions"
 
 [tool.setuptools]
-# This automatically finds the 'synriard' folder
-packages = ["synriard"] 
+# Only publish the Python packages for models that are included in the artifact.
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = [
+    "synriard",
+    "synriard.urdf",
+    "synriard.urdf.Alicia_D_v5_6",
+    "synriard.urdf.Alicia_M_v1_1",
+    "synriard.urdf.Alicia_M_v1_2",
+    "synriard.mjcf",
+    "synriard.mjcf.Alicia_D_v5_6",
+    "synriard.mjcf.Alicia_M_v1_1",
+    "synriard.mjcf.Alicia_M_v1_2",
+]
 
 [tool.setuptools.package-data]
-# This ensures non-python files are included
+# Keep PyPI artifacts under the project size limit by shipping active Alicia models only.
+# Older Alicia_M_v1_0 and large Bessica_D/Bessica_M assets remain in the repository,
+# but are intentionally not included in wheels/sdists.
 synriard = [
-    "urdf/**/*",
-    "meshes/**/*",
-    "mjcf/**/*",
+    "urdf/Alicia_D_v5_5/**/*",
+    "meshes/Alicia_D_v5_5/**/*",
+    "meshes/Alicia_D_v5_6/**/*",
+    "meshes/Alicia_M_v1_1/**/*",
+    "meshes/Alicia_M_v1_2/**/*",
 ]
+"synriard.urdf.Alicia_D_v5_6" = ["*.urdf"]
+"synriard.urdf.Alicia_M_v1_1" = ["*.urdf"]
+"synriard.urdf.Alicia_M_v1_2" = ["*.urdf"]
+"synriard.mjcf.Alicia_D_v5_6" = ["*.xml"]
+"synriard.mjcf.Alicia_M_v1_1" = ["*.xml"]
+"synriard.mjcf.Alicia_M_v1_2" = ["*.xml"]

@@ -21,7 +21,7 @@ Website: https://synriarobotics.ai
 
 
 
-__version__ = "1.2.0"
+__version__ = "1.2.4"
 __author__ = "Synria Robotics Team"
 __copyright__ = "Copyright (c) 2025 Synria Robotics Co., Ltd."
 __license__ = "GPL-3.0"
