@@ -4,5 +4,5 @@ from types import SimpleNamespace
 # Get the absolute path to THIS directory
 _MODULE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-Bessica_M_v1_0 = SimpleNamespace()
-Bessica_M_v1_0.urdf = os.path.join(_MODULE_PATH, "Bessica_M_v1_0.urdf")
+Alicia_D_v5_5_gripper_100mm = SimpleNamespace()
+Alicia_D_v5_5_gripper_100mm.urdf = os.path.join(_MODULE_PATH, "Alicia_D_v5_5_gripper_100mm.urdf")

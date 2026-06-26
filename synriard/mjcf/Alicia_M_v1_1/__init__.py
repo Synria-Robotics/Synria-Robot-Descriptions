@@ -4,12 +4,6 @@ from types import SimpleNamespace
 # Get the absolute path to THIS directory
 _MODULE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-Alicia_M_v1_1_bi_interactive = SimpleNamespace()
-Alicia_M_v1_1_bi_interactive.xml = os.path.join(_MODULE_PATH, "Alicia_M_v1_1_bi_vertical_interactive.xml")
-
-Alicia_M_v1_1_bimanual_interactive = SimpleNamespace()
-Alicia_M_v1_1_bimanual_interactive.xml = os.path.join(_MODULE_PATH, "Alicia_M_v1_1_bi_vertical_interactive.xml")
-
 Alicia_M_v1_1_bi_vertical_interactive = SimpleNamespace()
 Alicia_M_v1_1_bi_vertical_interactive.xml = os.path.join(_MODULE_PATH, "Alicia_M_v1_1_bi_vertical_interactive.xml")
 
