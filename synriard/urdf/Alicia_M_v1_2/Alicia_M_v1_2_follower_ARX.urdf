@@ -286,7 +286,7 @@
       xyz="0 0 1" />
     <limit
       lower="-1.57"
-      upper="1.57"
+      upper="0.785"
       effort="5"
       velocity="10" />
   </joint>
@@ -542,7 +542,7 @@
     name="tool0_fixed_joint"
     type="fixed">
     <origin
-      xyz="0 0 0.15"
+      xyz="0 0 0.1295"
       rpy="0 0 0" />
     <parent
       link="link6" />
