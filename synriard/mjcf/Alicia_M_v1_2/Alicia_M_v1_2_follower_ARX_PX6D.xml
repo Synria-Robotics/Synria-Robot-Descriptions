@@ -1,5 +1,5 @@
-<mujoco model="alicia_m_v1_2_follower_arx">
-  <compiler angle="radian" meshdir="../../meshes/Alicia_M_v1_2/arx/"/>
+<mujoco model="alicia_m_v1_2_follower_arx_px6d">
+  <compiler angle="radian" meshdir="../../meshes/Alicia_M_v1_2/arx_px6d/"/>
 
   <asset>
     <mesh name="base_link" file="base_link.stl"/>
@@ -22,58 +22,58 @@
   <worldbody>
     <geom conaffinity="1" condim="3" contype="1" friction="1 .1 .1" group="2" material="MatPlane" name="floor" pos="0 0 0" rgba="0.8 0.9 0.8 1" size="10 10 0.125" type="plane" />
     <light castshadow="false" cutoff="100" diffuse="1 1 1" dir="-0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular=".1 .1 .1" />
-    <body name="base_link" pos="0 0 0">
-      <inertial pos="0.00193539 -1.7423e-06 0.0332634" mass="1.30948" diaginertia="0.0036059 0.0019724 0.00476024"/>
+    <body name="base_link">
+      <inertial pos="0.00193539 -1.742302e-06 0.03326341" quat="0.00719872 -0.707047 0.707094 -0.00719121" mass="1.30948" diaginertia="0.001972403 0.003605423 0.004760723"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="base_link"/>
       <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="base_link"/>
       <body name="link1" pos="0.0086095 0 0.09725">
-        <inertial pos="0.000725762 -0.000703329 0.0322654" quat="0.50804 0.497212 0.495605 0.49905" mass="0.243059" diaginertia="0.000108906 9.8532e-05 8.6092e-05"/>
+        <inertial pos="0.0007257616 -0.000703329 0.03226543" quat="0.704464 -0.709684 -0.0013002 -0.00879293" mass="0.243059" diaginertia="8.609203e-05 9.853203e-05 0.0001089062"/>
         <joint name="joint1" pos="0 0 0" axis="0 0 1" range="-2.7475 2.7475" actuatorfrcrange="-5 5"/>
         <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link1"/>
         <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link1"/>
-        <body name="link2" pos="0 -0.0004 0.0425">
-          <inertial pos="-0.149861 -0.00135016 0.00655049" quat="0.526529 0.474116 0.477012 0.520039" mass="0.370826" diaginertia="0.000607791 0.000563695 0.000110774"/>
-          <joint name="joint2" pos="0 0 0" axis="0 -1 0" range="-3.14 0" actuatorfrcrange="-5 5"/>
+        <body name="link2" pos="0 -0.0004 0.0425" quat="0.707105 -0.707108 0 0">
+          <inertial pos="-0.1491182 -0.005793626 -0.0007300628" quat="0.70841 -0.704635 0.0287843 -0.0285796" mass="0.579389" diaginertia="0.0003764071 0.002471491 0.002535728"/>
+          <joint name="joint2" pos="0 0 0" axis="0 0 -1" range="-3.14 0.0" actuatorfrcrange="-5 5"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link2"/>
           <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link2"/>
-          <body name="link3" pos="-0.28185 0 0.040324">
-            <inertial pos="0.130111 0.00138697 0.0221992" quat="0.476304 0.52343 0.520774 0.477441" mass="0.706596" diaginertia="0.000357608 0.00031105 0.000205341"/>
-            <joint name="joint3" pos="0 0 0" axis="0 1 0" range="-3.14 0" actuatorfrcrange="-5 5"/>
+          <body name="link3" pos="-0.28185 -0.040324 0" quat="3.67321e-06 -1 -0 -0">
+            <inertial pos="0.1301106 0.02219922 -0.001386966" quat="0.998975 0.00189654 -0.000759379 -0.0452298" mass="0.706596" diaginertia="0.0002053409 0.0003110505 0.0003576084"/>
+            <joint name="joint3" pos="0 0 0" axis="0 0 -1" range="-3.14 0.0" actuatorfrcrange="-5 5"/>
             <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link3"/>
             <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link3"/>
-            <body name="link4" pos="0.21842 0 0.028546">
-              <inertial pos="0.0595174 0.0004549 0.0532623" quat="0.00982413 0.729878 -0.0133895 0.683376" mass="0.31793" diaginertia="0.000129224 9.90988e-05 9.46242e-05"/>
-              <joint name="joint4" pos="0 0 0" axis="0 -1 0" range="-1.57 1.57" actuatorfrcrange="-5 5"/>
+            <body name="link4" pos="0.21842 0.028546 0">
+              <inertial pos="0.05499051 0.04910492 -0.0002342911" quat="0.710158 -0.700198 0.0526631 -0.0512454" mass="0.365111" diaginertia="0.0001086302 0.0001204708 0.0001523219"/>
+              <joint name="joint4" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" actuatorfrcrange="-5 5"/>
               <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link4"/>
               <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link4"/>
-              <body name="link5" pos="0.063 0.000675 0.034">
-                <inertial pos="0.00851946 1.55672e-05 -0.0360716" quat="0.80408 0.59447 0.00607792 -0.00485223" mass="0.351146" diaginertia="0.000136466 0.000104511 0.000104097"/>
-                <joint name="joint5" pos="0 0 0" axis="0 0 -1" range="-1.57 1.57" actuatorfrcrange="-5 5"/>
+              <body name="link5" pos="0.063 0.034 -0.000675" quat="0.707105 0.707108 0 0">
+                <inertial pos="0.008519462 -1.556723e-05 0.03607161" quat="0.564273 0.423785 -0.572868 -0.416923" mass="0.351146" diaginertia="0.0001040971 0.0001045109 0.0001364656"/>
+                <joint name="joint5" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" actuatorfrcrange="-5 5"/>
                 <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link5"/>
                 <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link5"/>
-                <body name="link6" pos="0.03 0 -0.040304">
-                  <inertial pos="0.0442832 -5.70492e-05 0.0156211" quat="0.706256 0.707558 -0.0164785 0.0170739" mass="0.460841" diaginertia="0.000243411 0.000196083 0.0001207"/>
-                  <joint name="joint6" pos="0 0 0" axis="1 0 0" range="-2.791 2.791" actuatorfrcrange="-5 5"/>
+                <body name="link6" pos="0.03 0 0.04030394" quat="0.707107 0 0.707107 0">
+                  <inertial pos="0.0002393657 6.932305e-05 0.05868602" quat="0.706691 -0.000491459 -0.00100087 0.707521" mass="0.504337" diaginertia="0.00014835 0.0002248287 0.0003034646"/>
+                  <joint name="joint6" pos="0 0 0" axis="0 0 1" range="-2.791 2.791" actuatorfrcrange="-5 5"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link6"/>
                   <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link6"/>
-                  <body name="link7" pos="0.1415 -0.05 0">
-                    <inertial pos="-0.0425655 -0.0108534 -0.000209221" quat="0.571942 0.588667 0.400821 0.407058" mass="0.0249331" diaginertia="8.74601e-06 6.56521e-06 4.74959e-06"/>
-                    <joint name="joint7" pos="0 0 0" axis="0 -1 0" type="slide" range="-0.05 0" actuatorfrcrange="-5 5"/>
+                  <body name="link7" pos="0 0.05 0.17531" quat="0.499998 0.5 -0.5 0.500002">
+                    <inertial pos="-0.04256548 0.0002092212 -0.01085341" quat="0.0114811 -0.984244 -0.00524382 0.176364" mass="0.0249331" diaginertia="4.749586e-06 6.565212e-06 8.746013e-06"/>
+                    <joint name="joint7" pos="0 0 0" axis="0 0 -1" type="slide" range="-0.05 0.0" actuatorfrcrange="-5 5"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link7"/>
                     <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link7"/>
                   </body>
-                  <body name="link8" pos="0.1415 0.05 0">
-                    <inertial pos="-0.0425655 0.0108534 0.000209221" quat="0.400821 0.407058 0.571942 0.588667" mass="0.0249331" diaginertia="8.74601e-06 6.56521e-06 4.74959e-06"/>
-                    <joint name="joint8" pos="0 0 0" axis="0 -1 0" type="slide" range="0 0.05" actuatorfrcrange="-5 5"/>
+                  <body name="link8" pos="0 -0.05 0.17531" quat="0.499998 -0.500002 0.5 0.5">
+                    <inertial pos="0.04256548 -0.0002092212 -0.01085341" quat="0.984244 -0.0114811 -0.176364 0.00524382" mass="0.0249331" diaginertia="4.749586e-06 6.565212e-06 8.746013e-06"/>
+                    <joint name="joint8" pos="0 0 0" axis="0 0 1" type="slide" range="0.0 0.05" actuatorfrcrange="-5 5"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="link8"/>
                     <geom type="mesh" rgba="0.15 0.15 0.15 1" mesh="link8"/>
                   </body>
-                  <body name="tool0" pos="0.1375 0 0" quat="0.707107 0 0.707107 0">
+                  <body name="tool0" pos="0 0 0.1735">
                     <inertial pos="0 0 0" quat="1 0 0 0" mass="0.001" diaginertia="1e-08 1e-08 1e-08"/>
                     <geom type="sphere" size="0.005" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
                     <site name="tool0_site" pos="0 0 0" size="0.01" type="sphere"/>
                   </body>
-                  <!-- <body name="marker" pos="0.10148 -0.0005 0.02365" quat="0.707105 0 0 0.707108">
+                  <!-- <body name="marker" pos="0.02365 0 0.13748" quat="0.499998 -0.5 -0.500002 0.5">
                     <inertial pos="0 0 0" quat="1 0 0 0" mass="0.001" diaginertia="1e-08 1e-08 1e-08"/>
                     <geom type="sphere" size="0.005" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1"/>
                     <site name="marker_site" pos="0 0 0" size="0.01" type="sphere"/>
@@ -92,7 +92,6 @@
     <exclude body1="link1" body2="link2"/>
     <exclude body1="link2" body2="link3"/>
     <exclude body1="link3" body2="link4"/>
-    <exclude body1="link2" body2="link4"/>
     <exclude body1="link4" body2="link5"/>
     <exclude body1="link5" body2="link6"/>
     <exclude body1="link6" body2="link7"/>
