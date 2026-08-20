@@ -13,6 +13,9 @@ Alicia_D_v5_6_gripper_50mm.xml = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_gripp
 Alicia_D_v5_6_leader = SimpleNamespace()
 Alicia_D_v5_6_leader.xml = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_leader.xml")
 
+Alicia_D_v5_6_leader_arx = SimpleNamespace()
+Alicia_D_v5_6_leader_arx.xml = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_leader_arx.xml")
+
 Alicia_D_v5_6_leader_ur = SimpleNamespace()
 Alicia_D_v5_6_leader_ur.xml = os.path.join(_MODULE_PATH, "Alicia_D_v5_6_leader_ur.xml")
 
