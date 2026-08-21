@@ -766,7 +766,7 @@
       velocity="120" />
   </joint>
   <link
-    name="left_hand_link">
+    name="right_hand_link">
     <inertial>
       <origin
         xyz="0.00389077800231912 7.04146554481033E-07 0.015345207049219"
@@ -787,7 +787,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Corina/left_hand_link.STL" />
+          filename="../../meshes/Corina/right_hand_link1.STL" />
       </geometry>
       <material
         name="">
@@ -801,239 +801,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Corina/left_hand_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="left_hand_joint"
-    type="revolute">
-    <origin
-      xyz="0 -0.107 0.195"
-      rpy="-1.5707963267949 0 -3.14159265358979" />
-    <parent
-      link="base_link" />
-    <child
-      link="left_hand_link" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-1.57"
-      upper="1.57"
-      effort="5"
-      velocity="10" />
-  </joint>
-  <link
-    name="left_hand_link2">
-    <inertial>
-      <origin
-        xyz="0.0417741385348952 0.00209793004671865 -0.000613161241207682"
-        rpy="0 0 0" />
-      <mass
-        value="0.095580268868723" />
-      <inertia
-        ixx="5.77492984679922E-05"
-        ixy="1.58980153076328E-07"
-        ixz="-3.81270888856093E-08"
-        iyy="5.55672916885967E-05"
-        iyz="-9.58131904823516E-10"
-        izz="3.15468346785645E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Corina/left_hand_link2.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Corina/left_hand_link2.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="left_hand_joint2"
-    type="revolute">
-    <origin
-      xyz="0 0 0.042199999999999"
-      rpy="0 -1.5707963267949 0" />
-    <parent
-      link="left_hand_link" />
-    <child
-      link="left_hand_link2" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-1.57"
-      upper="1.57"
-      effort="5"
-      velocity="10" />
-  </joint>
-  <link
-    name="left_hand_link3">
-    <inertial>
-      <origin
-        xyz="0.000600570549994073 0.0031695164987485 0.0154859440299978"
-        rpy="0 0 0" />
-      <mass
-        value="0.0549751310205965" />
-      <inertia
-        ixx="1.30143809186195E-05"
-        ixy="-3.86596430724596E-11"
-        ixz="5.86100710900752E-10"
-        iyy="2.17168190744988E-05"
-        iyz="-1.80461477179337E-07"
-        izz="2.29875587880825E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Corina/left_hand_link3.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 0.35" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Corina/left_hand_link3.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="left_hand_joint3"
-    type="revolute">
-    <origin
-      xyz="0.0791000000000001 0 0"
-      rpy="0 1.5707963267949 0" />
-    <parent
-      link="left_hand_link2" />
-    <child
-      link="left_hand_link3" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-1.57"
-      upper="1.57"
-      effort="5"
-      velocity="10" />
-  </joint>
-  <link
-    name="left_hand_link4">
-    <inertial>
-      <origin
-        xyz="-0.0848795039619684 -0.000599970770932296 -0.000600008836259464"
-        rpy="0 0 0" />
-      <mass
-        value="0.0708003399992638" />
-      <inertia
-        ixx="2.05908254456732E-05"
-        ixy="3.88129740542727E-12"
-        ixz="4.24216922596887E-12"
-        iyy="2.55095062277153E-05"
-        iyz="-9.37050970298591E-09"
-        izz="1.81102166308392E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Corina/left_hand_link4.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Corina/left_hand_link4.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="left_hand_joint4"
-    type="revolute">
-    <origin
-      xyz="0 0 0.0412"
-      rpy="1.5708 1.5708 0" />
-    <parent
-      link="left_hand_link3" />
-    <child
-      link="left_hand_link4" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-1.05"
-      upper="1.05"
-      effort="5"
-      velocity="10" />
-  </joint>
-  <link
-    name="right_hand_link">
-    <inertial>
-      <origin
-        xyz="0.00566032067757651 8.73951257557293E-07 0.0136558508068673"
-        rpy="0 0 0" />
-      <mass
-        value="0.0414870697899481" />
-      <inertia
-        ixx="1.82449200148984E-05"
-        ixy="-3.58107104105764E-12"
-        ixz="-2.94041040722162E-07"
-        iyy="1.09163152814661E-05"
-        iyz="-1.60427576174174E-10"
-        izz="1.85913058980171E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Corina/right_hand_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../../meshes/Corina/right_hand_link.STL" />
+          filename="../../meshes/Corina/right_hand_link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -1041,8 +809,8 @@
     name="right_hand_joint"
     type="revolute">
     <origin
-      xyz="0 0.107 0.195"
-      rpy="1.5708 0 3.1416" />
+      xyz="0 -0.107 0.195"
+      rpy="-1.5707963267949 0 -3.14159265358979" />
     <parent
       link="base_link" />
     <child
@@ -1059,17 +827,17 @@
     name="right_hand_link2">
     <inertial>
       <origin
-        xyz="0.0414163740200199 -0.00243056320121771 -0.000548424784322845"
+        xyz="0.0417741385348952 0.00209793004671865 -0.000613161241207682"
         rpy="0 0 0" />
       <mass
-        value="0.0945218936792809" />
+        value="0.095580268868723" />
       <inertia
-        ixx="5.71821917244615E-05"
-        ixy="-1.77170660117522E-07"
-        ixz="3.80834829971394E-08"
-        iyy="5.54300015369794E-05"
-        iyz="-1.394879096315E-09"
-        izz="3.11312677524621E-05" />
+        ixx="5.77492984679922E-05"
+        ixy="1.58980153076328E-07"
+        ixz="-3.81270888856093E-08"
+        iyy="5.55672916885967E-05"
+        iyz="-9.58131904823516E-10"
+        izz="3.15468346785645E-05" />
     </inertial>
     <visual>
       <origin
@@ -1099,14 +867,14 @@
     name="right_hand_joint2"
     type="revolute">
     <origin
-      xyz="0 0 0.0422"
-      rpy="0 -1.5708 0" />
+      xyz="0 0 0.042199999999999"
+      rpy="0 -1.5707963267949 0" />
     <parent
       link="right_hand_link" />
     <child
       link="right_hand_link2" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
       lower="-1.57"
       upper="1.57"
@@ -1117,17 +885,17 @@
     name="right_hand_link3">
     <inertial>
       <origin
-        xyz="0.000599429450002491 -0.0031695164987447 0.015485944029999"
+        xyz="0.000600570549994073 0.0031695164987485 0.0154859440299978"
         rpy="0 0 0" />
       <mass
-        value="0.0549751310206084" />
+        value="0.0549751310205965" />
       <inertia
-        ixx="1.30143809186185E-05"
-        ixy="-3.86596426412316E-11"
-        ixz="-5.86100712150035E-10"
-        iyy="2.17168190744996E-05"
-        iyz="1.8046147717955E-07"
-        izz="2.29875587880845E-05" />
+        ixx="1.30143809186195E-05"
+        ixy="-3.86596430724596E-11"
+        ixz="5.86100710900752E-10"
+        iyy="2.17168190744988E-05"
+        iyz="-1.80461477179337E-07"
+        izz="2.29875587880825E-05" />
     </inertial>
     <visual>
       <origin
@@ -1140,7 +908,7 @@
       <material
         name="">
         <color
-          rgba="1 1 1 1" />
+          rgba="1 1 1 0.35" />
       </material>
     </visual>
     <collision>
@@ -1157,8 +925,8 @@
     name="right_hand_joint3"
     type="revolute">
     <origin
-      xyz="0.0791 0 0"
-      rpy="0 1.5708 0" />
+      xyz="0.0791000000000001 0 0"
+      rpy="0 1.5707963267949 0" />
     <parent
       link="right_hand_link2" />
     <child
@@ -1175,17 +943,17 @@
     name="right_hand_link4">
     <inertial>
       <origin
-        xyz="-0.0006000289376047 -0.0848795039619685 -0.000600009866158324"
+        xyz="-0.0848795039619684 -0.000599970770932296 -0.000600008836259464"
         rpy="0 0 0" />
       <mass
-        value="0.0708003399992637" />
+        value="0.0708003399992638" />
       <inertia
-        ixx="2.54822056811577E-05"
-        ixy="-4.21697584584034E-12"
-        ixz="2.87231619588739E-08"
-        iyy="2.05908254456732E-05"
-        iyz="5.21785499388982E-12"
-        izz="1.81375171773968E-05" />
+        ixx="2.05908254456732E-05"
+        ixy="3.88129740542727E-12"
+        ixz="4.24216922596887E-12"
+        iyy="2.55095062277153E-05"
+        iyz="-9.37050970298591E-09"
+        izz="1.81102166308392E-05" />
     </inertial>
     <visual>
       <origin
@@ -1216,11 +984,243 @@
     type="revolute">
     <origin
       xyz="0 0 0.0412"
-      rpy="-1.5708 0 3.1416" />
+      rpy="1.5708 1.5708 0" />
     <parent
       link="right_hand_link3" />
     <child
       link="right_hand_link4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.05"
+      upper="1.05"
+      effort="5"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_hand_link">
+    <inertial>
+      <origin
+        xyz="0.00566032067757651 8.73951257557293E-07 0.0136558508068673"
+        rpy="0 0 0" />
+      <mass
+        value="0.0414870697899481" />
+      <inertia
+        ixx="1.82449200148984E-05"
+        ixy="-3.58107104105764E-12"
+        ixz="-2.94041040722162E-07"
+        iyy="1.09163152814661E-05"
+        iyz="-1.60427576174174E-10"
+        izz="1.85913058980171E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Corina/left_hand_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Corina/left_hand_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.107 0.195"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_hand_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_hand_link2">
+    <inertial>
+      <origin
+        xyz="0.0414163740200199 -0.00243056320121771 -0.000548424784322845"
+        rpy="0 0 0" />
+      <mass
+        value="0.0945218936792809" />
+      <inertia
+        ixx="5.71821917244615E-05"
+        ixy="-1.77170660117522E-07"
+        ixz="3.80834829971394E-08"
+        iyy="5.54300015369794E-05"
+        iyz="-1.394879096315E-09"
+        izz="3.11312677524621E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Corina/left_hand_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Corina/left_hand_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0422"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="left_hand_link" />
+    <child
+      link="left_hand_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_hand_link3">
+    <inertial>
+      <origin
+        xyz="0.000599429450002491 -0.0031695164987447 0.015485944029999"
+        rpy="0 0 0" />
+      <mass
+        value="0.0549751310206084" />
+      <inertia
+        ixx="1.30143809186185E-05"
+        ixy="-3.86596426412316E-11"
+        ixz="-5.86100712150035E-10"
+        iyy="2.17168190744996E-05"
+        iyz="1.8046147717955E-07"
+        izz="2.29875587880845E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Corina/left_hand_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Corina/left_hand_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_joint3"
+    type="revolute">
+    <origin
+      xyz="0.0791 0 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="left_hand_link2" />
+    <child
+      link="left_hand_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_hand_link4">
+    <inertial>
+      <origin
+        xyz="-0.0006000289376047 -0.0848795039619685 -0.000600009866158324"
+        rpy="0 0 0" />
+      <mass
+        value="0.0708003399992637" />
+      <inertia
+        ixx="2.54822056811577E-05"
+        ixy="-4.21697584584034E-12"
+        ixz="2.87231619588739E-08"
+        iyy="2.05908254456732E-05"
+        iyz="5.21785499388982E-12"
+        izz="1.81375171773968E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Corina/left_hand_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../../meshes/Corina/left_hand_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_joint4"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0412"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="left_hand_link3" />
+    <child
+      link="left_hand_link4" />
     <axis
       xyz="0 0 -1" />
     <limit
