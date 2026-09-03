@@ -35,6 +35,7 @@ include = [
     "synriard",
     "synriard.urdf",
     "synriard.urdf.Alicia_D_v5_6",
+    "synriard.urdf.Alicia_D_v6_1_2",
     "synriard.urdf.Alicia_M_v1_1",
     "synriard.urdf.Alicia_M_v1_2",
     "synriard.mjcf",
@@ -51,10 +52,12 @@ synriard = [
     "urdf/Alicia_D_v5_5/**/*",
     "meshes/Alicia_D_v5_5/**/*",
     "meshes/Alicia_D_v5_6/**/*",
+    "meshes/Alicia_D_v6_1_2/**/*",
     "meshes/Alicia_M_v1_1/**/*",
     "meshes/Alicia_M_v1_2/**/*",
 ]
 "synriard.urdf.Alicia_D_v5_6" = ["*.urdf"]
+"synriard.urdf.Alicia_D_v6_1_2" = ["*.urdf"]
 "synriard.urdf.Alicia_M_v1_1" = ["*.urdf"]
 "synriard.urdf.Alicia_M_v1_2" = ["*.urdf"]
 "synriard.mjcf.Alicia_D_v5_6" = ["*.xml"]

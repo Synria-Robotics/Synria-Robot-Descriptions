@@ -18,8 +18,6 @@
     </contact>
   </mujoco>
 
-
-
   <link
     name="base_link">
     <inertial>
@@ -42,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/base_link.STL" />
+          filename="base_link.STL" />
       </geometry>
       <material
         name="">
@@ -56,7 +54,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/base_link.STL" />
+          filename="base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -82,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link1.STL" />
+          filename="link1.STL" />
       </geometry>
       <material
         name="">
@@ -96,7 +94,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link1.STL" />
+          filename="link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -140,7 +138,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link2.STL" />
+          filename="link2.STL" />
       </geometry>
       <material
         name="">
@@ -154,7 +152,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link2.STL" />
+          filename="link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -198,7 +196,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link3.STL" />
+          filename="link3.STL" />
       </geometry>
       <material
         name="">
@@ -212,7 +210,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link3.STL" />
+          filename="link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -256,7 +254,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link4_100mm.STL" />
+          filename="link4_100mm.STL" />
       </geometry>
       <material
         name="">
@@ -270,7 +268,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link4_100mm.STL" />
+          filename="link4_100mm.STL" />
       </geometry>
     </collision>
   </link>
@@ -314,7 +312,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link5.STL" />
+          filename="link5.STL" />
       </geometry>
       <material
         name="">
@@ -328,7 +326,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link5.STL" />
+          filename="link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -372,7 +370,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link6_100mm.STL" />
+          filename="link6_100mm.STL" />
       </geometry>
       <material
         name="">
@@ -386,7 +384,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/link6_100mm.STL" />
+          filename="link6_100mm.STL" />
       </geometry>
     </collision>
   </link>
@@ -430,7 +428,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/left_gripper_100mm.STL" />
+          filename="left_gripper_100mm.STL" />
       </geometry>
       <material
         name="">
@@ -444,7 +442,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/left_gripper_100mm.STL" />
+          filename="left_gripper_100mm.STL" />
       </geometry>
     </collision>
   </link>
@@ -488,7 +486,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/right_gripper_100mm.STL" />
+          filename="right_gripper_100mm.STL" />
       </geometry>
       <material
         name="">
@@ -502,7 +500,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../../meshes/Alicia_D_v5_6/follower_standard/right_gripper_100mm.STL" />
+          filename="right_gripper_100mm.STL" />
       </geometry>
     </collision>
   </link>
